@@ -1,93 +1,56 @@
 # ccfhw2025
 
+本仓库是华为胡杨林基金2025《**面向应用场景的虚拟机自动调优方法**》项目的工作仓库。
 
+**目标**：设计一套面向 JavaScript 虚拟机的**高效自动调优框架**，在配置项选取、搜索策略设计与调优部署方式之间建立协同机制，以提升系统整体的调优效能与适应性。该框架将在开源的JavaScript虚拟机V8上进行部分原型实现与验证。
 
-## Getting started
+## 目标测试场景
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+**运行环境**：开源Chromium浏览器（132版本），基于Linux Arm64
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+**运行与测试要求**：应用非首次打开的加载时延；
 
-## Add your files
+**验收场景**（网页端场景）：
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+1. 在线办公类软件（WPS、腾讯文档、石墨办公）
+2. 具体场景：针对文字较多、数据较多的办公文档进行：PPT字号修改、PPT插入文字、Excel修改列宽、Excel修改排序等
 
-```
-cd existing_repo
-git remote add origin http://222.195.92.204:1480/proj/jstuner/ccfhw2025.git
-git branch -M main
-git push -uf origin main
-```
+对于离线+在线调优过的场景，JavaScript执行时间降低x%左右，页面端到端时延降低x%左右。
 
-## Integrate with your tools
+## 项目阶段
 
-- [ ] [Set up project integrations](http://222.195.92.204:1480/proj/jstuner/ccfhw2025/-/settings/integrations)
+| 阶段 | 起始时间 | 任务描述               | 任务目标                                                     | 交付成果                                                     |
+| ---- | -------- | ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1    | T~T+3    | 虚拟机参数配置实证分析 | 1. 对v8虚拟机参数配置和在不同代码特征下参数的效果进行实证了解与调研工作，筛选出用于调优器的参数集合和需要收集的代码特征集合  2. 收集用于训练性能模型的数据集，包括代码特征向量、参数配置向量与相应的优化效果 | 实证分析报告：包含不同配置参数的作用、依赖关系的分析，程序特征对配置参数选择的影响的分析 |
+| 2    | T+3~T+6  | 训练性能模型           | 1. 完善用于模型训练的数据集：收集v8在不同场景下的使用不同参数配置得到的性能结果  2. 基于数据集训练得到调优配置的性能模型：包含用于在线调优的配置预测模型和用于离线调优的性能预测模型 | 1. 两类性能模型的训练数据集与训练脚本；  2. 性能模型设计文档 |
+| 3    | T+6~T+9  | 实现混合调优架构       | 集成训练的性能模型，在开源v8虚拟机和chromium下实现在线调优+离线调优的混合架构的demo | 1. 支持调优的开源虚拟机Demo：可以在特定的场景下对JS的执行实现调优  2. 基于v8和chromium的混合调优架构的设计文档；  3. 技术创新说明书 |
+| 4    | T+9~T+12 | 性能测试与调整         | 对上述调优架构demo在给定数据集或场景下进行性能上的测试，并进一步地调整实现以优化调优效果 | 1. 支持混合调优方式的开源虚拟机软件源代码：特定场景下，对于离线+在线调优过的场景，JavaScript执行时间降低x%左右，页面端到端时延降低x%左右  2. 测试文档：包含详细的测试方法、数据集或场景以及本调优工具的测试结果 |
 
-## Collaborate with your team
+## 项目规划与TODO
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+- [ ] 在验收场景下预估收益（8.1之前）
+  - [ ] 在Linux ARM64平台下搭建chromium测试环境
+  - [ ] 使用devtools测试并收集目标场景现在的性能数据
+  - [ ] 使用OpenTuner对目标场景进行搜索调优，测试调优后的性能数据
+    * 需要一个自动化测试脚本：该脚本可以自动地启动chromium，打开目标页面，并记录目标页面的加载时延，将加载时延反馈给调优器，调用调优器进行下一轮的搜索。
 
-## Test and Deploy
+- [ ] 在线调优效果的验证（8.31之前）：在不考虑运行时开销的情况下，使用OpenTuner对目标场景热点函数的优化编译器进行调优，预估在线调优器的效果
 
-Use the built-in continuous integration in GitLab.
+- [ ] 确定用于收集和测试的数据集（8.31之前），包括纯js程序和网页场景
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+- [ ] V8虚拟机参数的实证分析（10.31之前）
 
-***
+  - [ ] 收集V8虚拟机参数列表，记录参数的取值集合，对参数按照可否运行时修改进行分类
+  - [ ] 收集实证数据：使用脚本测试在修改单个参数的情况下，对于不同应用程序的性能影响，建模(参数，程序特征)->性能加速比的数据模型
+    - [ ] 后续：根据测试和实际分析情况考虑多个参数组合修改的情况，即参数和参数之间的影响
+  - [ ] 分析V8的JIT编译器源码，结合[CGO2024](https://ieeexplore.ieee.org/abstract/document/10444847/?casa_token=aCmJkxEdcLUAAAAA:NTqsuJugtvvXGFSrdxEJySf5nUph9NjX6cwhIl2Vt0kkqWLuoj2J-nSN54iskRspf7lXBLrjXfkRdl0)的工作挖掘V8的JIT编译器中并未暴露出来的但是对性能有影响的启发式，并做成参数（可单独并行执行）
+  - [ ] 确定影响性能的用于JIT调优的参数配置，建模参数配置和代码特征的联系，形成简单高效的用于在线调优的启发式，或形成用于训练在线性能模型的数据集
+  - [ ] 形成用于模型训练的数据集或找到用于收集数据集的方式
 
-# Editing this README
+  ...
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+## 资源与帮助
 
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+* [v8](https://chromium.googlesource.com/v8/v8.git)
+* [Chromium Docs - Checking out and building Chromium on Linux](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md)
+* [分析运行时性能  | Chrome DevTools  | Chrome for Developers](https://developer.chrome.google.cn/docs/devtools/performance?hl=zh-cn#record)
