@@ -54,3 +54,4 @@
 * [v8](https://chromium.googlesource.com/v8/v8.git)
 * [Chromium Docs - Checking out and building Chromium on Linux](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md)
 * [分析运行时性能  | Chrome DevTools  | Chrome for Developers](https://developer.chrome.google.cn/docs/devtools/performance?hl=zh-cn#record)
+* Web页面自动化工具：[Puppeteer](https://pptr.dev/), [The Selenium Browser Automation Project](https://www.selenium.dev/documentation/), [Puppeteer：从零出发，全面掌握浏览器自动化神器](https://cloud.tencent.com/developer/article/2435791)
