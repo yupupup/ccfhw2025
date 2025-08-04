@@ -1,0 +1,1 @@
+{"turbo-inlining": 0, "use-osr": 1, "compact-on-every-full-gc": 1, "inline-new": 1, "max-optimized-bytecode-size": 63791, "max-inlined-bytecode-size": 264, "invocation-count-for-maglev": 430, "invocation-count-for-turbofan": 4788, "min-semi-space-size": 14, "stack-size": 1485, "baseline-batch-compilation-threshold": 5297}

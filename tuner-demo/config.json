@@ -1,4 +1,5 @@
 {
-    "userDataDir": "",
-    "chromePath": ""
+  "userDataDir": "",
+  "chromePath": "",
+  "args": []
 }
