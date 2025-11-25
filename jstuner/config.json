@@ -1,0 +1,19 @@
+{
+  "headless": false,
+  "userDataDir": "./user_data",
+  "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-gpu",
+    "--disable-software-rasterizer",
+    "--ignore-certificate-errors",
+    "--ignore-certificate-errors-spki-list",
+    "--disable-web-security",
+    "--allow-running-insecure-content",
+    "--disable-features=IsolateOrigins,site-per-process",
+    "--disable-features=BlockInsecurePrivateNetworkRequests",
+    "--disable-blink-features=AutomationControlled",
+    "--mute-audio"
+  ]
+}

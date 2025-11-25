@@ -1,0 +1,14 @@
+[
+  {
+    "name": "baseline",
+    "args": []
+  },
+  {
+    "name": "expose-gc",
+    "args": ["--js-flags=--expose-gc"]
+  },
+  {
+    "name": "no-opt",
+    "args": ["--js-flags=--no-opt"]
+  }
+]
