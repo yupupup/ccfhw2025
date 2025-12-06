@@ -1,0 +1,23 @@
+我在对V8迅疾中的参数做分析，我讲参数按照不同的功能分为了下面这几类：
+Generic	一些总体上的或通用的参数，例如experimental参数表示是否开启实验特性
+Wasm	WebAssembly相关
+Language mode/features	语言模式和语言特性相关
+Print	信息输出相关
+Testing/Fuzzing	测试相关
+Trace/Debug	Trace或debug相关
+GC/Memory	垃圾回收和内存管理相关
+Optimization	优化机制相关（例如内联缓存等）
+Data	数据表示相关
+Compiler/Tier Manager	编译执行框架相关（如jitless表示关闭JIT编译器，invocation-count-for-maglev表示需要调用多少次进入到maglev编译阶段）
+Ignition	Ignition解释器相关
+Sparkplug	Sparkplug基线编译器相关
+Turboshaft	Turboshaft编译器相关
+Turbolev	Turbolev相关（一个Turbofan和Maglev结合的JIT编译器, it’s a project aimed at replacing the Turbofan compiler frontend, using Maglev’s IR as the new starting point.）
+Turbofan	Turbofan相关
+Maglev	Maglev优化编译器相关
+
+现在，在flags.txt 中列出了所有的V8的参数以及参数的描述、默认值等。
+
+请你帮我根据上述参数的描述来将参数按照上述分类方式进行分类，输出到CSV中，包含两列，参数名和分类；另外，如果你认为一个参数很难分类到上述我给出的类别中，你可以先将它的分类留空，我们后续再对它进行讨论。
+
+不需要写代码解析，请你直接根据flags.txt中的文本描述给出结果
