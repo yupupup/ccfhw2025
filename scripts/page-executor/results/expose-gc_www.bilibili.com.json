@@ -1,0 +1,19 @@
+{
+  "experiment": {
+    "url": "https://www.bilibili.com",
+    "param_group": "expose-gc",
+    "load_time_ms": 26047,
+    "success": true
+  },
+  "script_performance": {
+    "page": "https://www.bilibili.com",
+    "param_group": "expose-gc",
+    "timestamp": 1764330845475,
+    "summary": {
+      "script_duration_ms": 0.756,
+      "task_duration_ms": 2.75,
+      "js_heap_used_mb": 21.56072235107422
+    },
+    "scripts": []
+  }
+}
