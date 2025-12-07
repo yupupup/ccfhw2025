@@ -1,4 +1,4 @@
-我在对V8迅疾中的参数做分析，我讲参数按照不同的功能分为了下面这几类：
+我在对V8虚拟机中的参数做分析，我讲参数按照不同的功能分为了下面这几类：
 Generic	一些总体上的或通用的参数，例如experimental参数表示是否开启实验特性
 Wasm	WebAssembly相关
 Language mode/features	语言模式和语言特性相关
