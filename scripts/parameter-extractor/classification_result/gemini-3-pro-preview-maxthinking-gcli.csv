@@ -1,4 +1,4 @@
-Flag Name,Category
+参数名,分类
 --experimental,Generic
 --test-only-unsafe,Testing/Fuzzing
 --abort-on-contradictory-flags,Generic
