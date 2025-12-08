@@ -1,2 +1,5 @@
 tuner-demo/trace.json
 tuner-demo/config.json
+tuner-demo/opentuner.db
+tuner-demo/opentuner.log
+user_data
