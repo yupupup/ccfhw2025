@@ -17,7 +17,7 @@ def load_csv(filename):
     return mapping
 
 
-def compare_multiple_csv(files, output_file="merged_comparison.csv"):
+def compare_multiple_csv(files, output_file="MERGE_RESULT.csv"):
     # 读取所有文件
     all_data = {}
     for f in files:

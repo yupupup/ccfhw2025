@@ -1,0 +1,938 @@
+flag,gemini-3-pro-preview-maxthinking-gcli.csv,glm-4.6.csv,gemini-2.5-pro-maxthinking-gcli.csv,kimi-k2-thinking.csv,doubao.csv,qwen3-max.csv,deepseek-reasoner.csv,same?,final_category
+abort-on-bad-builtin-profile-data,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Testing/Fuzzing,Testing/Fuzzing,Turbofan,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Testing/Fuzzing, Testing/Fuzzing, Turbofan"
+abort-on-contradictory-flags,Generic,Generic,Generic,Generic,Generic,Generic,Generic,yes,Generic
+abort-on-far-code-range,Compiler/Tier Manager,Compiler/Tier Manager,GC/Memory,Compiler/Tier Manager,Testing/Fuzzing,Compiler/Tier Manager,Optimization,no,"Compiler/Tier Manager, Compiler/Tier Manager, GC/Memory, Compiler/Tier Manager, Testing/Fuzzing, Compiler/Tier Manager, Optimization"
+abort-on-uncaught-exception,Trace/Debug,Generic,Trace/Debug,Trace/Debug,Generic,Trace/Debug,Language mode/features,no,"Trace/Debug, Generic, Trace/Debug, Trace/Debug, Generic, Trace/Debug, Language mode/features"
+additive-safe-int-feedback,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+adjust-os-scheduling-parameters,Generic,Generic,Generic,Generic,Generic,Generic,Generic,yes,Generic
+allocation-buffer-parking,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+allocation-site-pretenuring,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+allocation-site-tracking,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+allow-natives-for-differential-fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+allow-natives-syntax,Testing/Fuzzing,Generic,Generic,Testing/Fuzzing,Debug,Language mode/features,Language mode/features,no,"Testing/Fuzzing, Generic, Generic, Testing/Fuzzing, Debug, Language mode/features, Language mode/features"
+allow-overwriting-for-next-flag,Generic,Generic,Generic,Generic,Generic,Generic,Generic,yes,Generic
+allow-unsafe-function-constructor,Generic,Generic,Generic,Generic,Testing/Fuzzing,Security,Language mode/features,no,"Generic, Generic, Generic, Generic, Testing/Fuzzing, Security, Language mode/features"
+always-osr,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+always-osr-from-maglev,Maglev,Compiler/Tier Manager,Compiler/Tier Manager,Maglev,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,no,"Maglev, Compiler/Tier Manager, Compiler/Tier Manager, Maglev, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager"
+always-sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,yes,Sparkplug
+always-use-string-forwarding-table,Data,Data,Data,Data,Data,Data,Data,yes,Data
+analyze-environment-liveness,Turbofan,Compiler/Tier Manager,Optimization,Turbofan,Optimization,GC/Memory,Optimization,no,"Turbofan, Compiler/Tier Manager, Optimization, Turbofan, Optimization, GC/Memory, Optimization"
+arm-arch,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+asm-wasm-lazy-compilation,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+assert-hole-checked-by-value,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,GC/Memory,Trace/Debug,no,"Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, GC/Memory, Trace/Debug"
+assert-types,Testing/Fuzzing,Trace/Debug,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Trace/Debug,no,"Testing/Fuzzing, Trace/Debug, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Trace/Debug"
+async-stack-traces,Trace/Debug,Generic,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Language mode/features,no,"Trace/Debug, Generic, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Language mode/features"
+baseline-batch-compilation,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,yes,Sparkplug
+baseline-batch-compilation-threshold,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,yes,Sparkplug
+battery-saver-mode,Generic,Generic,Generic,Generic,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,no,"Generic, Generic, Generic, Generic, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager"
+better-code-range-allocation,Compiler/Tier Manager,Compiler/Tier Manager,GC/Memory,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,no,"Compiler/Tier Manager, Compiler/Tier Manager, GC/Memory, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization"
+black-allocated-pages,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+builtin-subclassing,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Optimization,Language mode/features,Language mode/features,no,"Language mode/features, Language mode/features, Language mode/features, Language mode/features, Optimization, Language mode/features, Language mode/features"
+builtins-effects-src,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Data,Print,Turbofan,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Data, Print, Turbofan"
+builtins-in-stack-traces,Trace/Debug,Generic,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Generic, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+bytecode-compiler-ablation-amount,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+bytecode-old-age,Ignition,Compiler/Tier Manager,GC/Memory,Ignition,Optimization,GC/Memory,GC/Memory,no,"Ignition, Compiler/Tier Manager, GC/Memory, Ignition, Optimization, GC/Memory, GC/Memory"
+bytecode-old-time,Ignition,Compiler/Tier Manager,GC/Memory,Ignition,Optimization,GC/Memory,GC/Memory,no,"Ignition, Compiler/Tier Manager, GC/Memory, Ignition, Optimization, GC/Memory, GC/Memory"
+cache-property-key-string-adds,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+cache-prototype-transitions,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+cet-compatible,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+check-handle-count,GC/Memory,Trace/Debug,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,Testing/Fuzzing,Trace/Debug,no,"GC/Memory, Trace/Debug, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, Testing/Fuzzing, Trace/Debug"
+clear-exceptions-on-js-entry,Generic,Generic,Generic,Generic,Debug,Generic,Generic,no,"Generic, Generic, Generic, Generic, Debug, Generic, Generic"
+clear-free-memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+clone-object-sidestep-transitions,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+code-comments,Trace/Debug,Print,Print,Trace/Debug,Print,Print,Generic,no,"Trace/Debug, Print, Print, Trace/Debug, Print, Print, Generic"
+code-stats,Trace/Debug,Print,Print,Trace/Debug,Print,Trace/Debug,Trace/Debug,no,"Trace/Debug, Print, Print, Trace/Debug, Print, Trace/Debug, Trace/Debug"
+compact,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+compact-code-space,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+compact-on-every-full-gc,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+compact-with-stack,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+compilation-cache,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+concurrent-array-buffer-sweeping,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+concurrent-builtin-generation,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+concurrent-cache-deserialization,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Ignition,no,"Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Ignition"
+concurrent-maglev-high-priority-threads,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+concurrent-maglev-max-threads,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+concurrent-marking,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+concurrent-marking-high-priority-threads,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+concurrent-marking-max-worker-num,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+concurrent-minor-ms-marking,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+concurrent-osr,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+concurrent-recompilation,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+concurrent-recompilation-delay,Compiler/Tier Manager,Testing/Fuzzing,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,no,"Compiler/Tier Manager, Testing/Fuzzing, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager"
+concurrent-recompilation-front-running,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+concurrent-recompilation-queue-length,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+concurrent-sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,yes,Sparkplug
+concurrent-sparkplug-high-priority-threads,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,yes,Sparkplug
+concurrent-sparkplug-max-threads,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,yes,Sparkplug
+concurrent-sweeping,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+concurrent-turbo-tracing,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+concurrent-turbofan-max-threads,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+conservative-stack-scanning,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+correctness-fuzzer-suppressions,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+cppgc-random-gc-interval,GC/Memory,Testing/Fuzzing,GC/Memory,GC/Memory,Testing/Fuzzing,GC/Memory,GC/Memory,no,"GC/Memory, Testing/Fuzzing, GC/Memory, GC/Memory, Testing/Fuzzing, GC/Memory, GC/Memory"
+cppgc-young-generation,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+cppheap-concurrent-marking,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+cppheap-incremental-marking,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+cpu-profiler-sampling-interval,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+csa-trap-on-node,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Debug,Turbofan,Turbofan,no,"Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Debug, Turbofan, Turbofan"
+debug-code,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Debug,Generic,Generic,no,"Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Debug, Generic, Generic"
+decommit-pooled-pages,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+deduplicate-heap-number-requests,Optimization,Data,Optimization,Optimization,Optimization,Optimization,Optimization,no,"Optimization, Data, Optimization, Optimization, Optimization, Optimization, Optimization"
+default-to-experimental-regexp-engine,Language mode/features,Language mode/features,Optimization,Language mode/features,Optimization,Compiler/Tier Manager,Optimization,no,"Language mode/features, Language mode/features, Optimization, Language mode/features, Optimization, Compiler/Tier Manager, Optimization"
+deopt-every-n-times,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+detailed-error-stack-trace,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Language mode/features,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Language mode/features"
+detailed-line-info,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+detect-ineffective-gcs-near-heap-limit,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+dict-property-const-tracking,Data,Optimization,Optimization,Data,Optimization,Optimization,Optimization,no,"Data, Optimization, Optimization, Data, Optimization, Optimization, Optimization"
+direct-handle,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+disable-abortjs,Generic,Generic,Generic,Generic,Generic,GC/Memory,Generic,no,"Generic, Generic, Generic, Generic, Generic, GC/Memory, Generic"
+disable-optimizing-compilers,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+disable-write-barriers,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+disallow-code-generation-from-strings,Generic,Generic,Generic,Generic,Generic,Security,Language mode/features,no,"Generic, Generic, Generic, Generic, Generic, Security, Language mode/features"
+disallow-unsafe-flags,Generic,Generic,Generic,Generic,Generic,Security,Generic,no,"Generic, Generic, Generic, Generic, Generic, Security, Generic"
+double-string-cache-size,Data,Data,Data,Data,Data,Data,Data,yes,Data
+dump-allocations-digest-at-alloc,GC/Memory,Testing/Fuzzing,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, Testing/Fuzzing, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+dump-builtins-hashes-to-file,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Data,Print,Turbofan,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Data, Print, Turbofan"
+dump-wasm-module,Wasm,Wasm,Wasm,Wasm,Print,Wasm,Wasm,no,"Wasm, Wasm, Wasm, Wasm, Print, Wasm, Wasm"
+dump-wasm-module-path,Wasm,Wasm,Wasm,Wasm,Data,Print,Wasm,no,"Wasm, Wasm, Wasm, Wasm, Data, Print, Wasm"
+efficiency-mode,Generic,Generic,Generic,Generic,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,no,"Generic, Generic, Generic, Generic, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager"
+efficiency-mode-delay-turbofan-multiply,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+efficiency-mode-disable-turbofan,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+embedded-src,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Data,Print,Generic,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Data, Print, Generic"
+embedded-variant,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Data,Print,Generic,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Data, Print, Generic"
+empty-context-extension-dep,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+enable-32dregs,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-allocation-folding,GC/Memory,GC/Memory,Optimization,GC/Memory,Optimization,Optimization,GC/Memory,no,"GC/Memory, GC/Memory, Optimization, GC/Memory, Optimization, Optimization, GC/Memory"
+enable-armv7,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-armv8,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-avx,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-avx-vnni,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-avx-vnni-int8,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-avx2,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-bmi1,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-bmi2,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-bytecode-compiler-ablation,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+enable-enumerated-keyed-access-bytecode,Language mode/features,Ignition,Ignition,Language mode/features,Optimization,Optimization,Ignition,no,"Language mode/features, Ignition, Ignition, Language mode/features, Optimization, Optimization, Ignition"
+enable-etw-by-custom-filter-only,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+enable-etw-stack-walking,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+enable-experimental-regexp-engine,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Optimization,Language mode/features,Optimization,no,"Language mode/features, Language mode/features, Language mode/features, Language mode/features, Optimization, Language mode/features, Optimization"
+enable-experimental-regexp-engine-on-excessive-backtracks,Language mode/features,Language mode/features,Optimization,Language mode/features,Optimization,Compiler/Tier Manager,Optimization,no,"Language mode/features, Language mode/features, Optimization, Language mode/features, Optimization, Compiler/Tier Manager, Optimization"
+enable-f16c,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-fma3,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-lazy-source-positions,Compiler/Tier Manager,Compiler/Tier Manager,Ignition,Compiler/Tier Manager,Ignition,Compiler/Tier Manager,Ignition,no,"Compiler/Tier Manager, Compiler/Tier Manager, Ignition, Compiler/Tier Manager, Ignition, Compiler/Tier Manager, Ignition"
+enable-lzcnt,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-neon,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-parser-ablation,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+enable-popcnt,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-preparser-ablation,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+enable-regexp-unaligned-accesses,Generic,Optimization,Optimization,Generic,Optimization,Optimization,Optimization,no,"Generic, Optimization, Optimization, Generic, Optimization, Optimization, Optimization"
+enable-sahf,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-sharedarraybuffer-per-context,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Data,Language mode/features,Language mode/features,no,"Language mode/features, Language mode/features, Language mode/features, Language mode/features, Data, Language mode/features, Language mode/features"
+enable-slow-asserts,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Generic,no,"Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Generic"
+enable-source-at-csa-bind,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Data,Generic,Data,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Data, Generic, Data"
+enable-sse3,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-sse4-1,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-sse4-2,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-ssse3,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-sudiv,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+enable-testing-opcode-in-wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+enable-unconditional-write-barriers,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+enable-vfp3,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+ephemeron-fixpoint-iterations,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+etw-trace-debug,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+exit-on-contradictory-flags,Generic,Generic,Generic,Generic,Generic,Generic,Generic,yes,Generic
+experimental,Generic,Generic,Generic,Generic,Generic,Generic,Generic,yes,Generic
+experimental-embedder-instance-types,Generic,Generic,Generic,Generic,Generic,Generic,Language mode/features,no,"Generic, Generic, Generic, Generic, Generic, Generic, Language mode/features"
+experimental-flush-embedded-blob-icache,Generic,Testing/Fuzzing,Generic,Generic,Testing/Fuzzing,GC/Memory,Generic,no,"Generic, Testing/Fuzzing, Generic, Generic, Testing/Fuzzing, GC/Memory, Generic"
+experimental-fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+experimental-regexp-engine-capture-group-opt,Optimization,Language mode/features,Optimization,Optimization,Optimization,Optimization,Optimization,no,"Optimization, Language mode/features, Optimization, Optimization, Optimization, Optimization, Optimization"
+experimental-regexp-engine-capture-group-opt-max-memory-usage,GC/Memory,Language mode/features,Optimization,GC/Memory,Optimization,GC/Memory,Optimization,no,"GC/Memory, Language mode/features, Optimization, GC/Memory, Optimization, GC/Memory, Optimization"
+experimental-report-exceptions-from-callbacks,Generic,Generic,Generic,Generic,Generic,Generic,Generic,yes,Generic
+experimental-stack-trace-frames,Trace/Debug,Generic,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Generic, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+experimental-wasm-assume-ref-cast-succeeds,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+experimental-wasm-branch-hinting,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-compilation-hints,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-custom-descriptors,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-exnref,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-fp16,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-growable-stacks,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-imported-strings-utf8,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-instruction-tracing,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-js-interop,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-legacy-eh,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-memory-control,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-pgo-from-file,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-pgo-to-file,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-rab-integration,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-ref-cast-nop,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+experimental-wasm-revectorize,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-shared,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-skip-bounds-checks,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+experimental-wasm-skip-null-checks,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+experimental-wasm-stringref,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-type-reflection,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+experimental-wasm-wasmfx,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+expose-async-hooks,Generic,Print,Generic,Generic,Generic,Language mode/features,Generic,no,"Generic, Print, Generic, Generic, Generic, Language mode/features, Generic"
+expose-cputracemark-as,Trace/Debug,Print,Generic,Trace/Debug,Generic,Trace/Debug,Generic,no,"Trace/Debug, Print, Generic, Trace/Debug, Generic, Trace/Debug, Generic"
+expose-externalize-string,Testing/Fuzzing,Print,Generic,Testing/Fuzzing,Generic,Language mode/features,Generic,no,"Testing/Fuzzing, Print, Generic, Testing/Fuzzing, Generic, Language mode/features, Generic"
+expose-gc,Testing/Fuzzing,Print,Generic,Testing/Fuzzing,Generic,GC/Memory,Generic,no,"Testing/Fuzzing, Print, Generic, Testing/Fuzzing, Generic, GC/Memory, Generic"
+expose-gc-as,Testing/Fuzzing,Print,Generic,Testing/Fuzzing,Generic,GC/Memory,Generic,no,"Testing/Fuzzing, Print, Generic, Testing/Fuzzing, Generic, GC/Memory, Generic"
+expose-ignition-statistics,Ignition,Ignition,Ignition,Ignition,Generic,Trace/Debug,Generic,no,"Ignition, Ignition, Ignition, Ignition, Generic, Trace/Debug, Generic"
+expose-inspector-scripts,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+expose-memory-corruption-api,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+expose-statistics,Testing/Fuzzing,Print,Generic,Testing/Fuzzing,Generic,Trace/Debug,Generic,no,"Testing/Fuzzing, Print, Generic, Testing/Fuzzing, Generic, Trace/Debug, Generic"
+expose-trigger-failure,Testing/Fuzzing,Print,Generic,Testing/Fuzzing,Generic,Testing/Fuzzing,Generic,no,"Testing/Fuzzing, Print, Generic, Testing/Fuzzing, Generic, Testing/Fuzzing, Generic"
+extensible-ro-snapshot,Data,GC/Memory,GC/Memory,Data,Data,GC/Memory,GC/Memory,no,"Data, GC/Memory, GC/Memory, Data, Data, GC/Memory, GC/Memory"
+external-memory-accounted-in-global-limit,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+external-memory-max-growing-factor,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+external-reference-stats,Trace/Debug,Compiler/Tier Manager,Print,Trace/Debug,Print,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Print, Trace/Debug, Print, Trace/Debug, Trace/Debug"
+fast-api-allow-float-in-sim,Turbofan,Turbofan,,Turbofan,Testing/Fuzzing,Turbofan,Turbofan,no,"Turbofan, Turbofan, , Turbofan, Testing/Fuzzing, Turbofan, Turbofan"
+fast-map-update,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+fast-properties-soft-limit,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+feedback-normalization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+fixed-array-bounds-checks,Generic,Optimization,Optimization,Generic,Optimization,GC/Memory,Turbofan,no,"Generic, Optimization, Optimization, Generic, Optimization, GC/Memory, Turbofan"
+flush-baseline-code,Sparkplug,Compiler/Tier Manager,GC/Memory,Sparkplug,Optimization,GC/Memory,GC/Memory,no,"Sparkplug, Compiler/Tier Manager, GC/Memory, Sparkplug, Optimization, GC/Memory, GC/Memory"
+flush-bytecode,Ignition,Compiler/Tier Manager,GC/Memory,Ignition,Optimization,GC/Memory,GC/Memory,no,"Ignition, Compiler/Tier Manager, GC/Memory, Ignition, Optimization, GC/Memory, GC/Memory"
+flush-code-based-on-tab-visibility,Compiler/Tier Manager,Compiler/Tier Manager,GC/Memory,Compiler/Tier Manager,Optimization,GC/Memory,GC/Memory,no,"Compiler/Tier Manager, Compiler/Tier Manager, GC/Memory, Compiler/Tier Manager, Optimization, GC/Memory, GC/Memory"
+flush-code-based-on-time,Compiler/Tier Manager,Compiler/Tier Manager,GC/Memory,Compiler/Tier Manager,Optimization,GC/Memory,GC/Memory,no,"Compiler/Tier Manager, Compiler/Tier Manager, GC/Memory, Compiler/Tier Manager, Optimization, GC/Memory, GC/Memory"
+flush-liftoff-code,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+for-of-optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+force-emit-interrupt-budget-checks,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+force-long-branches,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+force-memory-protection-keys,GC/Memory,Compiler/Tier Manager,GC/Memory,GC/Memory,Data,GC/Memory,GC/Memory,no,"GC/Memory, Compiler/Tier Manager, GC/Memory, GC/Memory, Data, GC/Memory, GC/Memory"
+force-slow-path,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Compiler/Tier Manager,Optimization,no,"Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Compiler/Tier Manager, Optimization"
+freeze-flags-after-init,Generic,Generic,Generic,Generic,Generic,Generic,Generic,yes,Generic
+function-context-cells,Data,Optimization,Optimization,Data,Optimization,Optimization,Optimization,no,"Data, Optimization, Optimization, Data, Optimization, Optimization, Optimization"
+function-context-cells-max-size,Data,Optimization,Optimization,Data,Optimization,Optimization,Optimization,no,"Data, Optimization, Optimization, Data, Optimization, Optimization, Optimization"
+future,Generic,Language mode/features,Language mode/features,Generic,Language mode/features,Language mode/features,Language mode/features,no,"Generic, Language mode/features, Language mode/features, Generic, Language mode/features, Language mode/features, Language mode/features"
+fuzzer-gc-analysis,GC/Memory,Testing/Fuzzing,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,no,"GC/Memory, Testing/Fuzzing, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing"
+fuzzer-random-seed,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Data,Data,Data,no,"Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Data, Data, Data"
+fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+fuzzing-and-concurrent-recompilation,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+gc-experiment-less-compaction,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+gc-fake-mmap,Trace/Debug,Print,GC/Memory,Trace/Debug,Data,Print,Generic,no,"Trace/Debug, Print, GC/Memory, Trace/Debug, Data, Print, Generic"
+gc-global,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+gc-interval,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+gc-memory-reducer-start-delay-ms,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+gc-speed-uses-counters,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+gc-stats,GC/Memory,GC/Memory,GC/Memory,GC/Memory,Print,GC/Memory,GC/Memory,no,"GC/Memory, GC/Memory, GC/Memory, GC/Memory, Print, GC/Memory, GC/Memory"
+gc-verbose,GC/Memory,GC/Memory,GC/Memory,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, GC/Memory, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+gdbjit,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+gdbjit-dump,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Print,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Print, Generic"
+gdbjit-dump-filter,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Print,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Print, Generic"
+gdbjit-full,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+handle-weak-ref-weakly-in-minor-gc,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+hard-abort,Trace/Debug,Generic,Trace/Debug,Trace/Debug,Generic,Generic,Generic,no,"Trace/Debug, Generic, Trace/Debug, Trace/Debug, Generic, Generic, Generic"
+harmony,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+harmony-import-attributes,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+harmony-intl-best-fit-matcher,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+harmony-remove-intl-locale-info-getters,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+harmony-shadow-realm,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+harmony-shipping,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+harmony-struct,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+harmony-temporal,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+hash-seed,Data,Generic,Generic,Data,Data,Data,Data,no,"Data, Generic, Generic, Data, Data, Data, Data"
+hashes-collide,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Data,Testing/Fuzzing,no,"Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Data, Testing/Fuzzing"
+heap-growing-percent,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+heap-profiler-show-hidden-objects,GC/Memory,Print,Trace/Debug,GC/Memory,Print,GC/Memory,Trace/Debug,no,"GC/Memory, Print, Trace/Debug, GC/Memory, Print, GC/Memory, Trace/Debug"
+heap-profiler-trace-objects,GC/Memory,Print,Trace/Debug,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,no,"GC/Memory, Print, Trace/Debug, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug"
+heap-profiler-use-embedder-graph,GC/Memory,Generic,Trace/Debug,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,no,"GC/Memory, Generic, Trace/Debug, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug"
+heap-snapshot-on-gc,GC/Memory,Print,GC/Memory,GC/Memory,Print,GC/Memory,Trace/Debug,no,"GC/Memory, Print, GC/Memory, GC/Memory, Print, GC/Memory, Trace/Debug"
+heap-snapshot-on-oom,GC/Memory,Print,GC/Memory,GC/Memory,Print,GC/Memory,Trace/Debug,no,"GC/Memory, Print, GC/Memory, GC/Memory, Print, GC/Memory, Trace/Debug"
+heap-snapshot-path,GC/Memory,Print,GC/Memory,GC/Memory,Data,Print,Trace/Debug,no,"GC/Memory, Print, GC/Memory, GC/Memory, Data, Print, Trace/Debug"
+heap-snapshot-string-limit,GC/Memory,Print,GC/Memory,GC/Memory,Print,GC/Memory,Trace/Debug,no,"GC/Memory, Print, GC/Memory, GC/Memory, Print, GC/Memory, Trace/Debug"
+heap-snapshot-verify,GC/Memory,Trace/Debug,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,GC/Memory,Trace/Debug,no,"GC/Memory, Trace/Debug, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, GC/Memory, Trace/Debug"
+help,Generic,Print,Generic,Generic,Generic,Generic,Generic,no,"Generic, Print, Generic, Generic, Generic, Generic, Generic"
+high-end-android,Generic,Generic,Generic,Generic,Generic,GC/Memory,GC/Memory,no,"Generic, Generic, Generic, Generic, Generic, GC/Memory, GC/Memory"
+high-end-android-physical-memory-threshold,Generic,Generic,Generic,Generic,Generic,GC/Memory,GC/Memory,no,"Generic, Generic, Generic, Generic, Generic, GC/Memory, GC/Memory"
+histogram-interval,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Data,Trace/Debug,Generic,no,"Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Data, Trace/Debug, Generic"
+hole-fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+icu-british-remove-full-weekday-comma,Language mode/features,Language mode/features,Generic,Language mode/features,Data,Language mode/features,Language mode/features,no,"Language mode/features, Language mode/features, Generic, Language mode/features, Data, Language mode/features, Language mode/features"
+icu-datetime-compat-lang,Language mode/features,Language mode/features,Generic,Language mode/features,Data,Language mode/features,Language mode/features,no,"Language mode/features, Language mode/features, Generic, Language mode/features, Data, Language mode/features, Language mode/features"
+icu-default-italian-number-grouping-always,Language mode/features,Language mode/features,Generic,Language mode/features,Data,Language mode/features,Language mode/features,no,"Language mode/features, Language mode/features, Generic, Language mode/features, Data, Language mode/features, Language mode/features"
+icu-timezone-data,Language mode/features,Language mode/features,Generic,Language mode/features,Data,Language mode/features,Language mode/features,no,"Language mode/features, Language mode/features, Generic, Language mode/features, Data, Language mode/features, Language mode/features"
+idle-gc-on-context-disposal,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+ignition-elide-noneffectful-bytecodes,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,yes,Ignition
+ignition-elide-redundant-tdz-checks,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,yes,Ignition
+ignition-filter-expression-positions,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,yes,Ignition
+ignition-reo,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,yes,Ignition
+ignition-share-named-property-feedback,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,yes,Ignition
+incremental-marking,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+incremental-marking-for-gc-in-background,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+incremental-marking-hard-trigger,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+incremental-marking-soft-trigger,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+incremental-marking-task,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+incremental-marking-unified-schedule,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+ineffective-gc-includes-global,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+ineffective-gc-mutator-utilization-threshold,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+ineffective-gc-size-threshold,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+ineffective-gcs-forces-last-resort,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+initial-heap-size,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+initial-old-space-size,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+initial-shared-heap-size,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+inline-date-accessors,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+inline-new,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+inspector-live-edit,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+intel-jcc-erratum-mitigation,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+internalize-on-the-fly,Data,Optimization,Optimization,Data,Optimization,Optimization,Optimization,no,"Data, Optimization, Optimization, Data, Optimization, Optimization, Optimization"
+interpreted-frames-native-stack,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+invocation-count-for-early-optimization,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+invocation-count-for-feedback-allocation,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+invocation-count-for-maglev,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+invocation-count-for-maglev-osr,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+invocation-count-for-maglev-with-delay,Maglev,Compiler/Tier Manager,Compiler/Tier Manager,Maglev,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,no,"Maglev, Compiler/Tier Manager, Compiler/Tier Manager, Maglev, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager"
+invocation-count-for-osr,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+invocation-count-for-turbofan,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+is-standalone-d8-shell,Generic,Generic,Generic,Generic,Generic,Generic,Generic,yes,Generic
+jit-fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+jitless,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+js-atomics-pause,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-base-64,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-decorators,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-defer-import-eval,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-error-iserror,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-explicit-resource-management,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-float16array,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-intl-locale-variants,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-nonextensible-applies-to-private,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-promise-try,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-regexp-duplicate-named-groups,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-regexp-escape,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-regexp-modifiers,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-shipping,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-source-phase-imports,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-staging,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+js-upsert,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+json-stringify-fast-path,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+large-page-pool,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+late-heap-limit-check,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+lazy,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Ignition,no,"Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Ignition"
+lazy-compile-dispatcher,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+lazy-compile-dispatcher-max-threads,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+lazy-eval,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Ignition,no,"Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Ignition"
+lazy-feedback-allocation,Optimization,Compiler/Tier Manager,Optimization,Optimization,Optimization,Compiler/Tier Manager,Optimization,no,"Optimization, Compiler/Tier Manager, Optimization, Optimization, Optimization, Compiler/Tier Manager, Optimization"
+lazy-new-space-shrinking,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+lazy-streaming,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Ignition,no,"Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Ignition"
+liftoff,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+liftoff-only,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+lite-mode,GC/Memory,Generic,Generic,GC/Memory,GC/Memory,GC/Memory,GC/Memory,no,"GC/Memory, Generic, Generic, GC/Memory, GC/Memory, GC/Memory, GC/Memory"
+ll-prof,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+local-off-stack-check,GC/Memory,Trace/Debug,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,GC/Memory,GC/Memory,no,"GC/Memory, Trace/Debug, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, GC/Memory, GC/Memory"
+log,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+log-all,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+log-code,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+log-code-disassemble,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+log-colour,Trace/Debug,Print,Print,Trace/Debug,Print,Print,Generic,no,"Trace/Debug, Print, Print, Trace/Debug, Print, Print, Generic"
+log-deopt,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+log-feedback-vector,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+log-function-events,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+log-ic,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+log-internal-timer-events,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+log-maps,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+log-maps-details,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+log-or-trace-osr,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+log-source-code,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+log-source-position,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+log-timer-events,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+logfile,Trace/Debug,Print,Trace/Debug,Trace/Debug,Data,Print,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Data, Print, Generic"
+logfile-per-isolate,Trace/Debug,Print,Trace/Debug,Trace/Debug,Data,Print,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Data, Print, Generic"
+maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-allocation-folding,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-as-top-tier,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-assert,Maglev,Maglev,Maglev,Maglev,Testing/Fuzzing,Maglev,Maglev,no,"Maglev, Maglev, Maglev, Maglev, Testing/Fuzzing, Maglev, Maglev"
+maglev-assert-stack-size,Maglev,Maglev,Maglev,Maglev,Testing/Fuzzing,Maglev,Maglev,no,"Maglev, Maglev, Maglev, Maglev, Testing/Fuzzing, Maglev, Maglev"
+maglev-break-on-entry,Maglev,Maglev,Maglev,Maglev,Debug,Maglev,Maglev,no,"Maglev, Maglev, Maglev, Maglev, Debug, Maglev, Maglev"
+maglev-build-code-on-background,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-cons-string-elision,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-cse,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-deopt-data-on-background,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-destroy-on-background,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-escape-analysis,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-filter,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-function-context-specialization,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-future,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-hoist-osr-value-phi-untagging,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-inline-api-calls,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-inline-date-accessors,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-inlining,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-licm,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-loop-peeling,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-loop-peeling-max-size,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-loop-peeling-max-size-cumulative,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-non-eager-inlining,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-object-tracking,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-optimistic-peeled-loops,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-osr,Maglev,Maglev,Compiler/Tier Manager,Maglev,Maglev,Maglev,Maglev,no,"Maglev, Maglev, Compiler/Tier Manager, Maglev, Maglev, Maglev, Maglev"
+maglev-overwrite-budget,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-overwrite-osr-budget,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-poly-calls,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-pretenure-store-values,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-print-bytecode,Maglev,Maglev,Print,Maglev,Print,Maglev,Maglev,no,"Maglev, Maglev, Print, Maglev, Print, Maglev, Maglev"
+maglev-print-feedback,Maglev,Maglev,Print,Maglev,Print,Maglev,Maglev,no,"Maglev, Maglev, Print, Maglev, Print, Maglev, Maglev"
+maglev-print-filter,Maglev,Maglev,Print,Maglev,Maglev,Maglev,Maglev,no,"Maglev, Maglev, Print, Maglev, Maglev, Maglev, Maglev"
+maglev-print-inlined,Maglev,Maglev,Print,Maglev,Print,Maglev,Maglev,no,"Maglev, Maglev, Print, Maglev, Print, Maglev, Maglev"
+maglev-print-provenance,Maglev,Maglev,Print,Maglev,Print,Maglev,Maglev,no,"Maglev, Maglev, Print, Maglev, Print, Maglev, Maglev"
+maglev-range-analysis,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-reuse-stack-slots,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-speculative-hoist-phi-untagging,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-stats,Maglev,Maglev,Print,Maglev,Print,Maglev,Maglev,no,"Maglev, Maglev, Print, Maglev, Print, Maglev, Maglev"
+maglev-stats-nvp,Maglev,Maglev,Print,Maglev,Print,Maglev,Maglev,no,"Maglev, Maglev, Print, Maglev, Print, Maglev, Maglev"
+maglev-truncation,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+maglev-untagged-phis,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+managed-zone-memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+manual-evacuation-candidates-selection,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+map-counters,Trace/Debug,Print,Trace/Debug,Trace/Debug,Data,Print,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Data, Print, Generic"
+max-fast-properties,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+max-heap-size,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+max-inlined-bytecode-size,Turbofan,Turbofan,Turbofan,Turbofan,Optimization,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Optimization, Turbofan, Turbofan"
+max-inlined-bytecode-size-absolute,Turbofan,Turbofan,Turbofan,Turbofan,Optimization,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Optimization, Turbofan, Turbofan"
+max-inlined-bytecode-size-cumulative,Turbofan,Turbofan,Turbofan,Turbofan,Optimization,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Optimization, Turbofan, Turbofan"
+max-inlined-bytecode-size-small,Turbofan,Turbofan,Turbofan,Turbofan,Optimization,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Optimization, Turbofan, Turbofan"
+max-inlined-bytecode-size-small-total,Turbofan,Turbofan,Turbofan,Turbofan,Optimization,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Optimization, Turbofan, Turbofan"
+max-inlined-bytecode-size-small-with-heapnum-in-out,Turbofan,Turbofan,Turbofan,Turbofan,Optimization,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Optimization, Turbofan, Turbofan"
+max-large-page-pool-size,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+max-lazy,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Ignition,no,"Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Ignition"
+max-maglev-hard-inline-depth,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+max-maglev-inline-depth,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+max-maglev-inlined-bytecode-size,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+max-maglev-inlined-bytecode-size-cumulative,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+max-maglev-inlined-bytecode-size-small,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+max-maglev-inlined-bytecode-size-small-total,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+max-maglev-inlined-bytecode-size-small-with-heapnum-in-out,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+max-old-space-size,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+max-opt,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+max-optimized-bytecode-size,Turbofan,Turbofan,Turbofan,Turbofan,Compiler/Tier Manager,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Compiler/Tier Manager, Turbofan, Turbofan"
+max-semi-space-size,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+max-serializer-nesting,Data,Compiler/Tier Manager,Generic,Data,Data,GC/Memory,Generic,no,"Data, Compiler/Tier Manager, Generic, Data, Data, GC/Memory, Generic"
+max-shared-heap-size,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+max-stack-trace-source-length,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+max-turbolev-inlined-bytecode-size-cumulative,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,yes,Turbolev
+max-valid-polymorphic-map-count,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+max-wasm-functions,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+mcpu,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+mega-dom-ic,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+memory-balancer,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-balancer-c-value,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-pool,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-pool-release-before-memory-pressure-gcs,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-pool-release-on-malloc-failures,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-pool-share-memory-on-teardown,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-protection-keys,GC/Memory,Compiler/Tier Manager,GC/Memory,GC/Memory,Data,GC/Memory,GC/Memory,no,"GC/Memory, Compiler/Tier Manager, GC/Memory, GC/Memory, Data, GC/Memory, GC/Memory"
+memory-reducer,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-reducer-favors-memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-reducer-for-small-heaps,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-reducer-gc-count,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-reducer-respects-frozen-state,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+memory-saver-mode,Generic,Generic,GC/Memory,Generic,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,no,"Generic, Generic, GC/Memory, Generic, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager"
+merge-background-deserialized-script-with-compilation-cache,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Ignition,no,"Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Ignition"
+min-inlining-frequency,Optimization,Turbofan,Turbofan,Optimization,Optimization,Turbofan,Turbofan,no,"Optimization, Turbofan, Turbofan, Optimization, Optimization, Turbofan, Turbofan"
+min-maglev-inlining-frequency,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+min-semi-space-size,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minimum-invocations-after-ic-update,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+minimum-invocations-before-optimization,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+minor-gc-task,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-gc-task-trigger,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-gc-task-with-lower-priority,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-ms,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-ms-concurrent-marking-trigger,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-ms-max-page-age,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-ms-min-lab-size-kb,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-ms-min-new-space-capacity-for-concurrent-marking-mb,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-ms-page-promotion-max-lab-threshold,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-ms-page-promotion-threshold,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-ms-shortcut-strings,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+minor-ms-trace-fragmentation,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+mock-arraybuffer-allocator,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+mock-arraybuffer-allocator-limit,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+move-object-start,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+move-prototype-transitions-first,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+multi-mapped-mock-allocator,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+native-code-counters,Trace/Debug,Print,Generic,Trace/Debug,Optimization,Trace/Debug,Optimization,no,"Trace/Debug, Print, Generic, Trace/Debug, Optimization, Trace/Debug, Optimization"
+omit-default-ctors,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,Ignition,yes,Ignition
+opt,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+optimize-for-size,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+optimize-gc-for-battery,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+optimize-maglev-optimizes-to-turbofan,Maglev,Turbofan,Compiler/Tier Manager,Maglev,Compiler/Tier Manager,Turbofan,Turbofan,no,"Maglev, Turbofan, Compiler/Tier Manager, Maglev, Compiler/Tier Manager, Turbofan, Turbofan"
+optimize-on-next-call-optimizes-to-maglev,Maglev,Maglev,Maglev,Maglev,Compiler/Tier Manager,Maglev,Maglev,no,"Maglev, Maglev, Maglev, Maglev, Compiler/Tier Manager, Maglev, Maglev"
+osr-from-maglev,Maglev,Compiler/Tier Manager,Compiler/Tier Manager,Maglev,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,no,"Maglev, Compiler/Tier Manager, Compiler/Tier Manager, Maglev, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager"
+osr-from-maglev-interrupt-scale-factor,Maglev,Compiler/Tier Manager,Compiler/Tier Manager,Maglev,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,no,"Maglev, Compiler/Tier Manager, Compiler/Tier Manager, Maglev, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager"
+osr-to-tierup,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+page-pool-timeout,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+page-promotion,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+page-promotion-threshold,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+parallel-compaction,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+parallel-compile-tasks-for-eager-toplevel,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+parallel-compile-tasks-for-lazy,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+parallel-marking,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+parallel-pause-for-gc-in-background,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+parallel-pointer-update,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+parallel-reclaim-unmodified-wrappers,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+parallel-scavenge,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+parallel-weak-ref-clearing,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+parse-only,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Language mode/features,no,"Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Language mode/features"
+parser-ablation-amount,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+partial-constant-pool,Generic,Generic,,Generic,Data,Generic,Data,no,"Generic, Generic, , Generic, Data, Generic, Data"
+perf-basic-prof,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+perf-basic-prof-only-functions,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+perf-basic-prof-path,Trace/Debug,Print,Trace/Debug,Trace/Debug,Data,Print,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Data, Print, Generic"
+perf-prof,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+perf-prof-annotate-wasm,Trace/Debug,Print,Wasm,Trace/Debug,Debug,Wasm,Generic,no,"Trace/Debug, Print, Wasm, Trace/Debug, Debug, Wasm, Generic"
+perf-prof-delete-file,Trace/Debug,Testing/Fuzzing,Trace/Debug,Trace/Debug,Testing/Fuzzing,Trace/Debug,Generic,no,"Trace/Debug, Testing/Fuzzing, Trace/Debug, Trace/Debug, Testing/Fuzzing, Trace/Debug, Generic"
+perf-prof-path,Trace/Debug,Print,Trace/Debug,Trace/Debug,Data,Print,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Data, Print, Generic"
+perf-prof-unwinding-info,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+perfetto-code-logger,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+precise-object-pinning,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+preconfigured-old-space-size,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+predictable,Testing/Fuzzing,Generic,Generic,Testing/Fuzzing,Testing/Fuzzing,Generic,Generic,no,"Testing/Fuzzing, Generic, Generic, Testing/Fuzzing, Testing/Fuzzing, Generic, Generic"
+predictable-gc-schedule,Testing/Fuzzing,Generic,GC/Memory,Testing/Fuzzing,Testing/Fuzzing,GC/Memory,GC/Memory,no,"Testing/Fuzzing, Generic, GC/Memory, Testing/Fuzzing, Testing/Fuzzing, GC/Memory, GC/Memory"
+preparser-ablation-amount,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+print-all-code,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-all-exceptions,Trace/Debug,Print,Print,Trace/Debug,Print,Trace/Debug,Print,no,"Trace/Debug, Print, Print, Trace/Debug, Print, Trace/Debug, Print"
+print-ast,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-break-location,Trace/Debug,Print,Trace/Debug,Trace/Debug,Print,Print,Print,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Print, Print, Print"
+print-builtin-code,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-builtin-code-filter,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-builtin-size,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-bytecode,Ignition,Ignition,Print,Ignition,Print,Print,Print,no,"Ignition, Ignition, Print, Ignition, Print, Print, Print"
+print-bytecode-filter,Ignition,Ignition,Print,Ignition,Print,Print,Print,no,"Ignition, Ignition, Print, Ignition, Print, Print, Print"
+print-code,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-code-verbose,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-deopt-stress,Testing/Fuzzing,Testing/Fuzzing,Print,Testing/Fuzzing,Print,Print,Print,no,"Testing/Fuzzing, Testing/Fuzzing, Print, Testing/Fuzzing, Print, Print, Print"
+print-feature-flags-json,Generic,Print,Print,Generic,Print,Print,Print,no,"Generic, Print, Print, Generic, Print, Print, Print"
+print-flag-values,Generic,Print,Print,Generic,Print,Print,Print,no,"Generic, Print, Print, Generic, Print, Print, Print"
+print-global-handles,GC/Memory,Print,Print,GC/Memory,Print,Print,Trace/Debug,no,"GC/Memory, Print, Print, GC/Memory, Print, Print, Trace/Debug"
+print-handles,GC/Memory,Print,Print,GC/Memory,Print,Print,Trace/Debug,no,"GC/Memory, Print, Print, GC/Memory, Print, Print, Trace/Debug"
+print-maglev-code,Maglev,Maglev,Print,Maglev,Print,Print,Print,no,"Maglev, Maglev, Print, Maglev, Print, Print, Print"
+print-maglev-deopt-verbose,Maglev,Maglev,Print,Maglev,Print,Print,Print,no,"Maglev, Maglev, Print, Maglev, Print, Print, Print"
+print-maglev-graph,Maglev,Maglev,Print,Maglev,Print,Print,Print,no,"Maglev, Maglev, Print, Maglev, Print, Print, Print"
+print-maglev-graphs,Maglev,Maglev,Print,Maglev,Print,Print,Print,no,"Maglev, Maglev, Print, Maglev, Print, Print, Print"
+print-opt-code,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-opt-code-filter,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-opt-source,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-regexp-bytecode,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-regexp-code,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-scopes,Print,Print,Print,Print,Print,Print,Print,yes,Print
+print-turbolev-frontend,Turbolev,Turbolev,Print,Turbolev,Print,Print,Print,no,"Turbolev, Turbolev, Print, Turbolev, Print, Print, Print"
+print-wasm-code,Wasm,Wasm,Wasm,Wasm,Print,Print,Print,no,"Wasm, Wasm, Wasm, Wasm, Print, Print, Print"
+print-wasm-code-function-index,Wasm,Wasm,Wasm,Wasm,Print,Print,Print,no,"Wasm, Wasm, Wasm, Wasm, Print, Print, Print"
+print-wasm-offheap-memory-size,Wasm,Wasm,Wasm,Wasm,Print,Print,Print,no,"Wasm, Wasm, Wasm, Wasm, Print, Print, Print"
+print-wasm-stub-code,Wasm,Wasm,Wasm,Wasm,Print,Print,Print,no,"Wasm, Wasm, Wasm, Wasm, Print, Print, Print"
+prof,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+prof-browser-mode,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+prof-cpp,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+prof-include-idle,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+prof-sampling-interval,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+profile-deserialization,Trace/Debug,Print,Trace/Debug,Trace/Debug,Print,Trace/Debug,Trace/Debug,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Print, Trace/Debug, Trace/Debug"
+profile-guided-optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Compiler/Tier Manager,no,"Optimization, Optimization, Optimization, Optimization, Optimization, Optimization, Compiler/Tier Manager"
+profile-guided-optimization-for-empty-feedback-vector,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Compiler/Tier Manager,no,"Optimization, Optimization, Optimization, Optimization, Optimization, Optimization, Compiler/Tier Manager"
+profile-heap-snapshot,GC/Memory,Print,Trace/Debug,GC/Memory,Print,Trace/Debug,Trace/Debug,no,"GC/Memory, Print, Trace/Debug, GC/Memory, Print, Trace/Debug, Trace/Debug"
+proto-assign-seq-opt,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+random-gc-interval,GC/Memory,Testing/Fuzzing,GC/Memory,GC/Memory,Testing/Fuzzing,GC/Memory,GC/Memory,no,"GC/Memory, Testing/Fuzzing, GC/Memory, GC/Memory, Testing/Fuzzing, GC/Memory, GC/Memory"
+random-seed,Testing/Fuzzing,Generic,Generic,Testing/Fuzzing,Data,Data,Data,no,"Testing/Fuzzing, Generic, Generic, Testing/Fuzzing, Data, Data, Data"
+randomize-all-allocations,GC/Memory,Testing/Fuzzing,GC/Memory,GC/Memory,Testing/Fuzzing,GC/Memory,GC/Memory,no,"GC/Memory, Testing/Fuzzing, GC/Memory, GC/Memory, Testing/Fuzzing, GC/Memory, GC/Memory"
+rcs,Trace/Debug,Print,Print,Trace/Debug,Print,Trace/Debug,Generic,no,"Trace/Debug, Print, Print, Trace/Debug, Print, Trace/Debug, Generic"
+rcs-cpu-time,Trace/Debug,Print,Print,Trace/Debug,Print,Trace/Debug,Generic,no,"Trace/Debug, Print, Print, Trace/Debug, Print, Trace/Debug, Generic"
+reclaim-unmodified-wrappers,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+redirect-code-traces,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Generic"
+redirect-code-traces-to,Trace/Debug,Print,Trace/Debug,Trace/Debug,Data,Print,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Data, Print, Generic"
+regexp-assemble-from-bytecode,Compiler/Tier Manager,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,no,"Compiler/Tier Manager, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization"
+regexp-backtracks-before-fallback,Compiler/Tier Manager,Language mode/features,Optimization,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,no,"Compiler/Tier Manager, Language mode/features, Optimization, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization"
+regexp-interpret-all,Compiler/Tier Manager,Optimization,Optimization,Compiler/Tier Manager,Testing/Fuzzing,Compiler/Tier Manager,Optimization,no,"Compiler/Tier Manager, Optimization, Optimization, Compiler/Tier Manager, Testing/Fuzzing, Compiler/Tier Manager, Optimization"
+regexp-optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+regexp-peephole-optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+regexp-possessive-quantifier,Testing/Fuzzing,Testing/Fuzzing,Language mode/features,Testing/Fuzzing,Testing/Fuzzing,Language mode/features,Optimization,no,"Testing/Fuzzing, Testing/Fuzzing, Language mode/features, Testing/Fuzzing, Testing/Fuzzing, Language mode/features, Optimization"
+regexp-results-cache,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+regexp-simd,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+regexp-tier-up,Compiler/Tier Manager,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,no,"Compiler/Tier Manager, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization"
+regexp-tier-up-ticks,Compiler/Tier Manager,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,no,"Compiler/Tier Manager, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization"
+rehash-snapshot,Data,Compiler/Tier Manager,Generic,Data,Testing/Fuzzing,GC/Memory,Data,no,"Data, Compiler/Tier Manager, Generic, Data, Testing/Fuzzing, GC/Memory, Data"
+reopt-after-lazy-deopts,Optimization,Compiler/Tier Manager,Optimization,Optimization,Compiler/Tier Manager,Compiler/Tier Manager,Optimization,no,"Optimization, Compiler/Tier Manager, Optimization, Optimization, Compiler/Tier Manager, Compiler/Tier Manager, Optimization"
+reorder-builtins,Compiler/Tier Manager,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,Testing/Fuzzing,Turbofan,no,"Compiler/Tier Manager, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization, Testing/Fuzzing, Turbofan"
+reserve-contiguous-compressed-read-only-space,GC/Memory,GC/Memory,GC/Memory,GC/Memory,Data,GC/Memory,GC/Memory,no,"GC/Memory, GC/Memory, GC/Memory, GC/Memory, Data, GC/Memory, GC/Memory"
+reserve-inline-budget-scale-factor,Turbofan,Turbofan,Turbofan,Turbofan,Optimization,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Optimization, Turbofan, Turbofan"
+resize-large-object,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+retain-maps-for-n-gc,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+reuse-scope-infos,Compiler/Tier Manager,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,no,"Compiler/Tier Manager, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization"
+runtime-call-stats,Trace/Debug,Print,Print,Trace/Debug,Print,Trace/Debug,Generic,no,"Trace/Debug, Print, Print, Trace/Debug, Print, Trace/Debug, Generic"
+sampling-heap-profiler-suppress-randomness,GC/Memory,Testing/Fuzzing,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,GC/Memory,Trace/Debug,no,"GC/Memory, Testing/Fuzzing, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, GC/Memory, Trace/Debug"
+sandbox-fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+sandbox-testing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+scavenger-chaos-mode,GC/Memory,Testing/Fuzzing,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,no,"GC/Memory, Testing/Fuzzing, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, GC/Memory, Testing/Fuzzing"
+scavenger-chaos-mode-threshold,GC/Memory,GC/Memory,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,no,"GC/Memory, GC/Memory, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, GC/Memory, Testing/Fuzzing"
+scavenger-conservative-object-pinning,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+scavenger-precise-object-pinning,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+scavenger-promote-quarantined-pages,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+scavenger-updates-allocation-limit,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+script-context-cells,Data,Optimization,Optimization,Data,Optimization,Optimization,Optimization,no,"Data, Optimization, Optimization, Data, Optimization, Optimization, Optimization"
+script-streaming,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Ignition,no,"Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Compiler/Tier Manager, Ignition"
+semi-space-growth-factor,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+serialization-statistics,Trace/Debug,Compiler/Tier Manager,Print,Trace/Debug,Print,GC/Memory,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Print, Trace/Debug, Print, GC/Memory, Trace/Debug"
+shared-heap,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+shared-string-table,Data,Data,Data,Data,Data,Data,Data,yes,Data
+shared-strings,Data,Data,Data,Data,Data,Data,Data,yes,Data
+short-builtin-calls,Compiler/Tier Manager,Optimization,Optimization,Compiler/Tier Manager,Optimization,Compiler/Tier Manager,Optimization,no,"Compiler/Tier Manager, Optimization, Optimization, Compiler/Tier Manager, Optimization, Compiler/Tier Manager, Optimization"
+shortcut-strings-with-stack,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+sim-arm64-optional-features,Generic,Testing/Fuzzing,,Generic,Data,Generic,Data,no,"Generic, Testing/Fuzzing, , Generic, Data, Generic, Data"
+single-generation,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+single-threaded,Generic,Generic,Generic,Generic,Generic,Generic,Compiler/Tier Manager,no,"Generic, Generic, Generic, Generic, Generic, Generic, Compiler/Tier Manager"
+single-threaded-gc,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+single-threaded-gc-in-background,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+slow-debug-code,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Debug,Generic,Generic,no,"Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Debug, Generic, Generic"
+slow-histograms,Trace/Debug,Testing/Fuzzing,Trace/Debug,Trace/Debug,Data,Trace/Debug,Generic,no,"Trace/Debug, Testing/Fuzzing, Trace/Debug, Trace/Debug, Data, Trace/Debug, Generic"
+smi-string-cache-size,Data,Data,Data,Data,Data,Data,Data,yes,Data
+sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,yes,Sparkplug
+sparkplug-filter,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,yes,Sparkplug
+sparkplug-needs-short-builtins,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,yes,Sparkplug
+sparkplug-plus,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,Sparkplug,yes,Sparkplug
+specialize-code-for-one-byte-seq-strings,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,Maglev,yes,Maglev
+stack-size,Generic,Generic,GC/Memory,Generic,Data,GC/Memory,Generic,no,"Generic, Generic, GC/Memory, Generic, Data, GC/Memory, Generic"
+stack-trace-limit,Trace/Debug,Generic,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Generic, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+stack-trace-on-illegal,Trace/Debug,Print,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Language mode/features,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Language mode/features"
+startup-blob,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Data,Print,Generic,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Data, Print, Generic"
+startup-src,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Data,Print,Generic,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Data, Print, Generic"
+sticky-mark-bits,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+stress-background-compile,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-branch-hinting,Testing/Fuzzing,Testing/Fuzzing,Wasm,Testing/Fuzzing,Testing/Fuzzing,Wasm,Testing/Fuzzing,no,"Testing/Fuzzing, Testing/Fuzzing, Wasm, Testing/Fuzzing, Testing/Fuzzing, Wasm, Testing/Fuzzing"
+stress-compaction,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-compaction-random,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-concurrent-allocation,GC/Memory,Testing/Fuzzing,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,no,"GC/Memory, Testing/Fuzzing, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing"
+stress-concurrent-inlining,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-concurrent-inlining-attach-code,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-flush-code,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-gc-during-compilation,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-ic,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-incremental-marking,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-inline,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-lazy-compilation,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-lazy-source-positions,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-maglev,Maglev,Testing/Fuzzing,Testing/Fuzzing,Maglev,Testing/Fuzzing,Maglev,Testing/Fuzzing,no,"Maglev, Testing/Fuzzing, Testing/Fuzzing, Maglev, Testing/Fuzzing, Maglev, Testing/Fuzzing"
+stress-marking,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-per-context-marking-worklist,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-runs,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-sampling-allocation-profiler,GC/Memory,Trace/Debug,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,no,"GC/Memory, Trace/Debug, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing"
+stress-scavenge,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-scavenger-conservative-object-pinning,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-scavenger-conservative-object-pinning-random,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-snapshot,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+stress-turbo-late-spilling,Turbofan,Testing/Fuzzing,Testing/Fuzzing,Turbofan,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,no,"Turbofan, Testing/Fuzzing, Testing/Fuzzing, Turbofan, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing"
+stress-validate-asm,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Testing/Fuzzing,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Testing/Fuzzing"
+stress-wasm-code-gc,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing"
+stress-wasm-memory-moving,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Testing/Fuzzing,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Testing/Fuzzing"
+stress-wasm-stack-switching,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Testing/Fuzzing,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Testing/Fuzzing"
+strict-termination-checks,Generic,Testing/Fuzzing,Testing/Fuzzing,Generic,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,no,"Generic, Testing/Fuzzing, Testing/Fuzzing, Generic, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing"
+string-slices,Data,Data,Data,Data,Data,Data,Data,yes,Data
+super-ic,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+suppress-asm-messages,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+switch-table-min-cases,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+switch-table-spread-threshold,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+target-arch,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Data,Generic,Generic,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Data, Generic, Generic"
+target-is-simulator,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Testing/Fuzzing,Generic,Generic,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Testing/Fuzzing, Generic, Generic"
+target-os,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Data,Generic,Generic,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Data, Generic, Generic"
+test-only-unsafe,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Generic,Testing/Fuzzing,no,"Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Generic, Testing/Fuzzing"
+test-small-max-function-context-stub-size,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+testing-bool-flag,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+testing-float-flag,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+testing-int-flag,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+testing-maybe-bool-flag,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+testing-prng-seed,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+testing-string-flag,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+text-is-readable,Generic,Generic,,Generic,Data,Generic,Generic,no,"Generic, Generic, , Generic, Data, Generic, Generic"
+trace,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-all-uses,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-allocation-stack-interval,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-asm-parser,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-asm-scanner,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-asm-time,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-backing-store,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-baseline,Sparkplug,Sparkplug,Trace/Debug,Sparkplug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Sparkplug, Sparkplug, Trace/Debug, Sparkplug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-baseline-batch-compilation,Sparkplug,Sparkplug,Trace/Debug,Sparkplug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Sparkplug, Sparkplug, Trace/Debug, Sparkplug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-block-coverage,Trace/Debug,Print,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-code-range-allocation,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-compilation-dependencies,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-compiler-dispatcher,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-concurrent-marking,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-concurrent-recompilation,Compiler/Tier Manager,Compiler/Tier Manager,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,no,"Compiler/Tier Manager, Compiler/Tier Manager, Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-context-disposal,GC/Memory,Trace/Debug,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, Trace/Debug, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-contexts,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-creation-allocation-sites,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-deopt,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-deopt-verbose,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-deserialization,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-detached-contexts,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-duplicate-threshold-kb,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-elements-transitions,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-environment-liveness,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-evacuation,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-evacuation-candidates,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-experimental-regexp-engine,Trace/Debug,Language mode/features,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Language mode/features, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-file-names,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-flush-code,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-for-in-enumerate,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-fragmentation,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-fragmentation-verbose,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-gc,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-gc-freelists,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-gc-freelists-verbose,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-gc-heap-layout,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-gc-heap-layout-ignore-minor-gc,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-gc-ignore-scavenger,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-gc-nvp,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-gc-object-stats,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-gc-object-stats-all-objects,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-gc-verbose,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-generalization,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-heap-broker,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-heap-broker-verbose,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-ignition-codegen,Ignition,Ignition,Trace/Debug,Ignition,Trace/Debug,Trace/Debug,Trace/Debug,no,"Ignition, Ignition, Trace/Debug, Ignition, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-ignition-dispatches-output-file,Ignition,Ignition,Trace/Debug,Ignition,Trace/Debug,Print,Trace/Debug,no,"Ignition, Ignition, Trace/Debug, Ignition, Trace/Debug, Print, Trace/Debug"
+trace-incremental-marking,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-isolates,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-lazy,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-liftoff,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-maglev-escape-analysis,Maglev,Maglev,Trace/Debug,Maglev,Trace/Debug,Trace/Debug,Trace/Debug,no,"Maglev, Maglev, Trace/Debug, Maglev, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-maglev-graph-building,Maglev,Maglev,Trace/Debug,Maglev,Trace/Debug,Trace/Debug,Trace/Debug,no,"Maglev, Maglev, Trace/Debug, Maglev, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-maglev-inlining,Maglev,Maglev,Trace/Debug,Maglev,Trace/Debug,Trace/Debug,Trace/Debug,no,"Maglev, Maglev, Trace/Debug, Maglev, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-maglev-kna-processor,Maglev,Maglev,Trace/Debug,Maglev,Trace/Debug,Trace/Debug,Trace/Debug,no,"Maglev, Maglev, Trace/Debug, Maglev, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-maglev-loop-speeling,Maglev,Maglev,Trace/Debug,Maglev,Trace/Debug,Trace/Debug,Trace/Debug,no,"Maglev, Maglev, Trace/Debug, Maglev, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-maglev-object-tracking,Maglev,Maglev,Trace/Debug,Maglev,Trace/Debug,Trace/Debug,Trace/Debug,no,"Maglev, Maglev, Trace/Debug, Maglev, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-maglev-phi-untagging,Maglev,Maglev,Trace/Debug,Maglev,Trace/Debug,Trace/Debug,Trace/Debug,no,"Maglev, Maglev, Trace/Debug, Maglev, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-maglev-range-analysis,Maglev,Maglev,Trace/Debug,Maglev,Trace/Debug,Maglev,Trace/Debug,no,"Maglev, Maglev, Trace/Debug, Maglev, Trace/Debug, Maglev, Trace/Debug"
+trace-maglev-regalloc,Maglev,Maglev,Trace/Debug,Maglev,Trace/Debug,Trace/Debug,Trace/Debug,no,"Maglev, Maglev, Trace/Debug, Maglev, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-memory-balancer,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-memory-reducer,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-migration,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-minor-ms-parallel-marking,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-module-status,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-mutator-utilization,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-normalization,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-number-string-cache,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-opt,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-opt-stats,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-opt-status,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-opt-verbose,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-osr,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-page-promotions,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-parallel-scavenge,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-pending-allocations,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-pretenuring,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-pretenuring-statistics,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-protector-invalidation,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-prototype-users,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-rail,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-read-only-promotion,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-read-only-promotion-verbose,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-regexp-assembler,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-regexp-bytecodes,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-regexp-graph,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-regexp-parser,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-regexp-peephole-optimization,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-regexp-tier-up,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-representation,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-resize-large-object,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-serializer,Trace/Debug,Compiler/Tier Manager,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Compiler/Tier Manager, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-side-effect-free-debug-evaluate,Trace/Debug,Testing/Fuzzing,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Testing/Fuzzing, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-store-elimination,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-stress-marking,GC/Memory,Testing/Fuzzing,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, Testing/Fuzzing, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-stress-scavenge,GC/Memory,Testing/Fuzzing,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, Testing/Fuzzing, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-temporal,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,yes,Trace/Debug
+trace-track-allocation-sites,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-alloc,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-bailouts,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-ceq,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-cfg-file,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Print,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Print, Trace/Debug"
+trace-turbo-escape,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-file-prefix,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Print,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Print, Trace/Debug"
+trace-turbo-filter,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-graph,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-inlining,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-jt,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-load-elimination,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-loop,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-path,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Print,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Print, Trace/Debug"
+trace-turbo-reduction,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-scheduled,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-scheduler,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-stack-accesses,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-trimming,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbo-types,Turbofan,Turbofan,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,no,"Turbofan, Turbofan, Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-turbolev-graph-building,Turbolev,Turbolev,Trace/Debug,Turbolev,Trace/Debug,Turbolev,Trace/Debug,no,"Turbolev, Turbolev, Trace/Debug, Turbolev, Trace/Debug, Turbolev, Trace/Debug"
+trace-unmapper,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-verify-csa,Trace/Debug,Turbofan,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,no,"Trace/Debug, Turbofan, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-wasm,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-code-gc,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-compilation-times,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-compiler,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-decoder,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-globals,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-inlining,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-instances,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-lazy-compilation,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-loop-peeling,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-memory,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-native-heap,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-offheap-memory,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-revectorize,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-serialization,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-simd-shuffle,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-stack-switching,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-streaming,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-wasm-typer,Wasm,Wasm,Wasm,Wasm,Trace/Debug,Wasm,Trace/Debug,no,"Wasm, Wasm, Wasm, Wasm, Trace/Debug, Wasm, Trace/Debug"
+trace-zone-stats,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+trace-zone-type-stats,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Trace/Debug,Trace/Debug,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Trace/Debug, Trace/Debug, Trace/Debug"
+track-detached-contexts,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+track-field-types,Data,Optimization,Optimization,Data,Optimization,GC/Memory,Data,no,"Data, Optimization, Optimization, Data, Optimization, GC/Memory, Data"
+track-gc-object-stats,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+transition-strings-during-gc-with-stack,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+trap-on-abort,Trace/Debug,Trace/Debug,Trace/Debug,Trace/Debug,Debug,Generic,Generic,no,"Trace/Debug, Trace/Debug, Trace/Debug, Trace/Debug, Debug, Generic, Generic"
+turbo-allocation-folding,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-cf-optimization,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-compress-frame-translations,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-elide-frames,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-escape,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-fast-api-calls,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-filter,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-inline-array-builtins,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-inline-js-wasm-calls,Turbofan,Wasm,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,no,"Turbofan, Wasm, Turbofan, Turbofan, Turbofan, Turbofan, Turbofan"
+turbo-inlining,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-instruction-scheduling,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-jt,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-load-elimination,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-log-builtins-count-input,Turbofan,Compiler/Tier Manager,,Turbofan,Data,Print,Generic,no,"Turbofan, Compiler/Tier Manager, , Turbofan, Data, Print, Generic"
+turbo-loop-peeling,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-loop-rotation,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-loop-variable,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-move-optimization,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-optimize-apply,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-optimize-inlined-js-wasm-wrappers,Turbofan,Wasm,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,no,"Turbofan, Wasm, Turbofan, Turbofan, Turbofan, Turbofan, Turbofan"
+turbo-optimize-math-minmax,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-profiling,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-profiling-input,Turbofan,Compiler/Tier Manager,,Turbofan,Data,Print,Generic,no,"Turbofan, Compiler/Tier Manager, , Turbofan, Data, Print, Generic"
+turbo-profiling-output,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Print,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Turbofan, Print, Turbofan"
+turbo-profiling-verbose,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-rewrite-far-jumps,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-splitting,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-stats,Turbofan,Turbofan,Print,Turbofan,Print,Turbofan,Turbofan,no,"Turbofan, Turbofan, Print, Turbofan, Print, Turbofan, Turbofan"
+turbo-stats-nvp,Turbofan,Turbofan,Print,Turbofan,Print,Turbofan,Turbofan,no,"Turbofan, Turbofan, Print, Turbofan, Print, Turbofan, Turbofan"
+turbo-stats-wasm,Turbofan,Turbofan,Wasm,Turbofan,Print,Wasm,Turbofan,no,"Turbofan, Turbofan, Wasm, Turbofan, Print, Wasm, Turbofan"
+turbo-store-elimination,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-stress-instruction-scheduling,Turbofan,Testing/Fuzzing,Testing/Fuzzing,Turbofan,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,no,"Turbofan, Testing/Fuzzing, Testing/Fuzzing, Turbofan, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing"
+turbo-string-builder,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-typer-hardening,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbo-verify,Turbofan,Turbofan,Turbofan,Turbofan,Testing/Fuzzing,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Testing/Fuzzing, Turbofan, Turbofan"
+turbo-verify-allocation,Turbofan,Turbofan,Turbofan,Turbofan,Testing/Fuzzing,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Testing/Fuzzing, Turbofan, Turbofan"
+turbo-verify-machine-graph,Turbofan,Turbofan,Turbofan,Turbofan,Testing/Fuzzing,Turbofan,Turbofan,no,"Turbofan, Turbofan, Turbofan, Turbofan, Testing/Fuzzing, Turbofan, Turbofan"
+turbo-wasm-address-reassociation,Turbofan,Wasm,Wasm,Turbofan,Turbofan,Turbofan,Wasm,no,"Turbofan, Wasm, Wasm, Turbofan, Turbofan, Turbofan, Wasm"
+turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbofan-inline-date-accessors,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,Turbofan,yes,Turbofan
+turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,yes,Turbolev
+turbolev-additive-safe-int-feedback,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,yes,Turbolev
+turbolev-future,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,yes,Turbolev
+turbolev-inline-js-wasm-wrappers,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,yes,Turbolev
+turbolev-non-eager-inlining,Turbolev,Turbolev,Turbolev,Turbolev,Turbolev,,Turbolev,yes,Turbolev
+turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,yes,Turboshaft
+turboshaft-assert-types,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Testing/Fuzzing,Testing/Fuzzing,Turboshaft,no,"Turboshaft, Turboshaft, Turboshaft, Turboshaft, Testing/Fuzzing, Testing/Fuzzing, Turboshaft"
+turboshaft-enable-debug-features,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,yes,Turboshaft
+turboshaft-load-elimination,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,yes,Turboshaft
+turboshaft-loop-unrolling,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,yes,Turboshaft
+turboshaft-opt-bisect-break,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Testing/Fuzzing,Turboshaft,Turboshaft,no,"Turboshaft, Turboshaft, Turboshaft, Turboshaft, Testing/Fuzzing, Turboshaft, Turboshaft"
+turboshaft-opt-bisect-limit,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Testing/Fuzzing,Turboshaft,Turboshaft,no,"Turboshaft, Turboshaft, Turboshaft, Turboshaft, Testing/Fuzzing, Turboshaft, Turboshaft"
+turboshaft-string-concat-escape-analysis,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,yes,Turboshaft
+turboshaft-trace-emitted,Turboshaft,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,no,"Turboshaft, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug"
+turboshaft-trace-if-else-to-switch,Turboshaft,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,no,"Turboshaft, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug"
+turboshaft-trace-intermediate-reductions,Turboshaft,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,no,"Turboshaft, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug"
+turboshaft-trace-load-elimination,Turboshaft,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,no,"Turboshaft, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug"
+turboshaft-trace-peeling,Turboshaft,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,no,"Turboshaft, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug"
+turboshaft-trace-reduction,Turboshaft,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,no,"Turboshaft, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug"
+turboshaft-trace-typing,Turboshaft,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,no,"Turboshaft, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug"
+turboshaft-trace-unrolling,Turboshaft,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,Turboshaft,Trace/Debug,no,"Turboshaft, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug, Turboshaft, Trace/Debug"
+turboshaft-typed-optimizations,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,yes,Turboshaft
+turboshaft-verify-load-elimination,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Testing/Fuzzing,Turboshaft,Turboshaft,no,"Turboshaft, Turboshaft, Turboshaft, Turboshaft, Testing/Fuzzing, Turboshaft, Turboshaft"
+turboshaft-verify-reductions,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Testing/Fuzzing,Turboshaft,Turboshaft,no,"Turboshaft, Turboshaft, Turboshaft, Turboshaft, Testing/Fuzzing, Turboshaft, Turboshaft"
+turboshaft-wasm-in-js-inlining,Turboshaft,Wasm,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,no,"Turboshaft, Wasm, Turboshaft, Turboshaft, Turboshaft, Turboshaft, Turboshaft"
+turboshaft-wasm-load-elimination,Turboshaft,Wasm,Turboshaft,Turboshaft,Turboshaft,Turboshaft,Turboshaft,no,"Turboshaft, Wasm, Turboshaft, Turboshaft, Turboshaft, Turboshaft, Turboshaft"
+typed-array-length-loading,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+unbox-double-arrays,Data,Data,Data,Data,Data,Optimization,Data,no,"Data, Data, Data, Data, Data, Optimization, Data"
+unmap-holes,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+use-external-strings,Data,Data,Data,Data,Data,Data,Data,yes,Data
+use-ic,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,Optimization,yes,Optimization
+use-libm-trig-functions,Generic,Optimization,Optimization,Generic,Optimization,Data,Optimization,no,"Generic, Optimization, Optimization, Generic, Optimization, Data, Optimization"
+use-marking-progress-bar,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+use-original-message-for-stack-trace,Trace/Debug,Generic,Trace/Debug,Trace/Debug,Debug,Trace/Debug,Generic,no,"Trace/Debug, Generic, Trace/Debug, Trace/Debug, Debug, Trace/Debug, Generic"
+use-osr,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,Compiler/Tier Manager,yes,Compiler/Tier Manager
+use-std-math-pow,Generic,Optimization,Optimization,Generic,Data,Data,Optimization,no,"Generic, Optimization, Optimization, Generic, Data, Data, Optimization"
+use-strict,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,Language mode/features,yes,Language mode/features
+v8-os-page-size,Generic,Generic,GC/Memory,Generic,Data,GC/Memory,GC/Memory,no,"Generic, Generic, GC/Memory, Generic, Data, GC/Memory, GC/Memory"
+validate-asm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+verify-code-merge,Testing/Fuzzing,Compiler/Tier Manager,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Ignition,no,"Testing/Fuzzing, Compiler/Tier Manager, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Ignition"
+verify-csa,Testing/Fuzzing,Turbofan,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Turbofan,Turbofan,no,"Testing/Fuzzing, Turbofan, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Turbofan, Turbofan"
+verify-get-js-builtin-state,Testing/Fuzzing,Trace/Debug,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Turbofan,no,"Testing/Fuzzing, Trace/Debug, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Turbofan"
+verify-heap,GC/Memory,GC/Memory,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,GC/Memory,GC/Memory,no,"GC/Memory, GC/Memory, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, GC/Memory, GC/Memory"
+verify-heap-skip-remembered-set,GC/Memory,GC/Memory,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,GC/Memory,GC/Memory,no,"GC/Memory, GC/Memory, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, GC/Memory, GC/Memory"
+verify-predictable,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,yes,Testing/Fuzzing
+verify-simplified-lowering,Testing/Fuzzing,Turbofan,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,Turbofan,Trace/Debug,no,"Testing/Fuzzing, Turbofan, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, Turbofan, Trace/Debug"
+verify-snapshot-checksum,Testing/Fuzzing,Compiler/Tier Manager,Testing/Fuzzing,Testing/Fuzzing,Testing/Fuzzing,GC/Memory,Generic,no,"Testing/Fuzzing, Compiler/Tier Manager, Testing/Fuzzing, Testing/Fuzzing, Testing/Fuzzing, GC/Memory, Generic"
+verify-write-barriers,GC/Memory,GC/Memory,Testing/Fuzzing,GC/Memory,Testing/Fuzzing,GC/Memory,GC/Memory,no,"GC/Memory, GC/Memory, Testing/Fuzzing, GC/Memory, Testing/Fuzzing, GC/Memory, GC/Memory"
+vtune-prof-annotate-wasm,Trace/Debug,Print,Wasm,Trace/Debug,Debug,Wasm,Generic,no,"Trace/Debug, Print, Wasm, Trace/Debug, Debug, Wasm, Generic"
+warn-about-builtin-profile-data,Compiler/Tier Manager,Compiler/Tier Manager,,Compiler/Tier Manager,Testing/Fuzzing,Testing/Fuzzing,Turbofan,no,"Compiler/Tier Manager, Compiler/Tier Manager, , Compiler/Tier Manager, Testing/Fuzzing, Testing/Fuzzing, Turbofan"
+wasm-allow-mixed-eh-for-testing,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+wasm-assert-types,Wasm,Wasm,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Wasm, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+wasm-async-compilation,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-bounds-checks,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-bulkmem-inlining,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-caching-hard-threshold,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-caching-threshold,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-caching-timeout-ms,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-capi-thread-pool-size,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-code-coverage,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-code-gc,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-debug-mask-for-testing,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+wasm-deopt,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-deopts-per-function-limit,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-disassembly-max-mb,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-dynamic-tiering,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-eager-tier-up-function,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-enforce-bounds-checks,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-fast-api,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-fuzzer-gen-test,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Testing/Fuzzing,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Testing/Fuzzing"
+wasm-generic-wrapper,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-inlining,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-inlining-budget,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-inlining-call-indirect,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-inlining-factor,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-inlining-ignore-call-counts,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+wasm-inlining-max-size,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-inlining-min-budget,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-jitless,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-jitless-if-available-for-testing,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+wasm-lazy-compilation,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-lazy-validation,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-loop-peeling,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-loop-peeling-max-size,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-loop-unrolling,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-math-intrinsics,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-max-code-space-size-mb,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-max-committed-code-mb,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-max-initial-code-space-reservation,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-max-mem-pages,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-max-module-size,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-max-table-size,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-memory64-trap-handling,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-native-module-cache,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-num-compilation-tasks,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-opt,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-simd-ssse3-codegen,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-stack-checks,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-stack-switching-stack-size,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-staging,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-sync-tier-up,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-test-streaming,Wasm,Testing/Fuzzing,Wasm,Wasm,Wasm,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Wasm, Wasm, Wasm"
+wasm-tier-mask-for-testing,Wasm,Testing/Fuzzing,Wasm,Wasm,Testing/Fuzzing,Wasm,Wasm,no,"Wasm, Testing/Fuzzing, Wasm, Wasm, Testing/Fuzzing, Wasm, Wasm"
+wasm-tier-up,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-tier-up-filter,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-tiering-budget,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-trace-native,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+wasm-wrapper-tiering-budget,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,Wasm,yes,Wasm
+win64-unwinding-info,Trace/Debug,Print,Trace/Debug,Trace/Debug,Data,Trace/Debug,Generic,no,"Trace/Debug, Print, Trace/Debug, Trace/Debug, Data, Trace/Debug, Generic"
+zero-unused-memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,GC/Memory,yes,GC/Memory
+zone-stats-tolerance,GC/Memory,GC/Memory,Trace/Debug,GC/Memory,Data,GC/Memory,Trace/Debug,no,"GC/Memory, GC/Memory, Trace/Debug, GC/Memory, Data, GC/Memory, Trace/Debug"
