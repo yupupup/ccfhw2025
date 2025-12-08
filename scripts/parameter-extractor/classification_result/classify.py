@@ -1,5 +1,6 @@
 import csv
 import glob
+import os
 from collections import defaultdict
 
 def load_csv(filename):
@@ -28,7 +29,8 @@ def compare_multiple_csv(files, output_file="merged_comparison.csv"):
         all_flags.update(d.keys())
 
     # 写合并结果
-    model_names = [f"model_{i+1}" for i in range(len(files))]
+    # 使用每个 CSV 的文件名作为模型名（保留扩展名），如需不带扩展名可改用 Path(f).stem
+    model_names = [os.path.basename(f) for f in files]
 
     with open(output_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
