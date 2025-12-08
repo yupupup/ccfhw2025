@@ -7,3 +7,4 @@ scripts/page-executor/test.js
 scripts/page-executor/test2.js
 scripts/page-executor/fb.js
 scripts/page-executor/trace.json
+scripts/page-executor/node_modules/
