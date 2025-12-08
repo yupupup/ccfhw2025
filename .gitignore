@@ -3,3 +3,7 @@ tuner-demo/config.json
 tuner-demo/opentuner.db
 tuner-demo/opentuner.log
 user_data
+scripts/page-executor/test.js
+scripts/page-executor/test2.js
+scripts/page-executor/fb.js
+scripts/page-executor/trace.json
