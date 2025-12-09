@@ -29,38 +29,57 @@ def compare_multiple_csv(files, output_file="MERGE_RESULT.csv"):
         all_flags.update(d.keys())
 
     # 写合并结果
-    # 使用每个 CSV 的文件名作为模型名（保留扩展名），如需不带扩展名可改用 Path(f).stem
+    # 使用每个 CSV 的文件名作为模型名
     model_names = [os.path.basename(f) for f in files]
 
     with open(output_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
 
         # 写表头
-        writer.writerow(["flag"] + model_names + ["same?", "final_category"])
+        writer.writerow(["flag"] + model_names + ["voted_category", "confidence"])
 
         # 每个参数依次对比
         for flag in sorted(all_flags):
-            categories = []
-            for f in files:
-                categories.append(all_data[f].get(flag, ""))
+            categories = [all_data[f].get(flag, "") for f in files]
+            
+            # 过滤掉空分类
+            non_empty_cats = [c for c in categories if c]
 
-            # 判断是否一致
-            non_empty_cats = [c for c in categories if c != ""]
-            same = "yes" if len(set(non_empty_cats)) <= 1 else "no"
-
-            # 一致 → 用统一分类
-            # 不一致 → 输出每个分类拼接
-            if same == "yes":
-                final_cat = non_empty_cats[0] if non_empty_cats else ""
+            if not non_empty_cats:
+                voted_category = ""
+                confidence = 0.0
             else:
-                final_cat = ", ".join(categories)
+                # 投票
+                counts = defaultdict(int)
+                for cat in non_empty_cats:
+                    counts[cat] += 1
 
-            writer.writerow([flag] + categories + [same, final_cat])
+                # 找出票数最多和第二多的
+                sorted_counts = sorted(counts.items(), key=lambda item: item[1], reverse=True)
+
+                voted_category = sorted_counts[0][0]
+                n_max = sorted_counts[0][1]
+                n_second = sorted_counts[1][1] if len(sorted_counts) > 1 else 0
+                
+                # 总投票数 N
+                N = len(non_empty_cats)
+
+                # 计算置信度
+                confidence = (n_max - n_second) / N if N > 0 else 0.0
+
+            writer.writerow([flag] + categories + [voted_category, f"{confidence:.2f}"])
 
     print(f"对比完成，已生成文件：{output_file}")
 
 
-# 使用方式（自动读取当前目录下所有 *.csv 文件）：
+# 使用方式（自动读取当前目录下所有 *.csv 文件，并排除 MERGE_RESULT.csv）：
 if __name__ == "__main__":
-    files = glob.glob("*.csv")   # 也可以手动写列表，例如 ["m1.csv", "m2.csv"]
-    compare_multiple_csv(files)
+    output_filename = "MERGE_RESULT.csv"
+    # 排除 MERGE_RESULT.csv
+    files = [f for f in glob.glob("*.csv") if os.path.basename(f) != output_filename]
+    
+    if not files:
+        print("在当前目录下没有找到需要处理的 .csv 文件。")
+    else:
+        print(f"找到 {len(files)} 个输入文件: {', '.join(files)}")
+        compare_multiple_csv(files, output_file=output_filename)
