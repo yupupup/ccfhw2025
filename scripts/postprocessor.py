@@ -136,7 +136,7 @@ class LogFeatureProcessor:
             self.save_features()
             
             # 清空原日志
-            self.clear_log()
+            # self.clear_log()
             
             return True
             
@@ -215,12 +215,27 @@ class LogFeatureProcessor:
         
         return summary
 
+def load_config(config_path="config.json"):
+    """读取 JSON 配置文件"""
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"配置文件不存在：{config_path}")
+        return {}
 
 def main():
-    """主函数"""
-    # 配置文件路径 - 可以根据需要修改
-    LOG_PATH = r"D:\v8\v8\out\x64.release\feature-vector.log"
-    OUTPUT_PATH = r"C:\Users\11436\Desktop\webpage-feature-vector.json"
+    # 从配置文件读默认值
+    config = load_config()
+
+    LOG_PATH = config.get(
+        "log_path",
+        r"D:\v8\v8\out\x64.release\feature-vector.log"
+    )
+    OUTPUT_PATH = config.get(
+        "output_path",
+        r"C:\Users\11436\Desktop\webpage-feature-vector.json"
+    )
     
     # 支持命令行参数
     if len(sys.argv) >= 2:
