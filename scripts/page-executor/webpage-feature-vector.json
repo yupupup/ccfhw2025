@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "source_log": "/home/rmy/dev/ccfhw2025/scripts/page-executor/feature-vector.log",
+    "processed_at": "2025-12-09T17:02:48.122482",
+    "feature_count": 12
+  },
+  "features": {
+    "max_ast_depth": 29,
+    "max_iteration_depth": 1,
+    "max_cyclomatic_complexity": 250,
+    "max_branches": 249,
+    "total_functions": 2622,
+    "total_symbols": 13129,
+    "total_nodes": 34565,
+    "total_cyclomatic_complexity": 3333,
+    "total_parameters": 5042,
+    "total_branches": 713,
+    "total_comparations": 236,
+    "total_operators": 5357
+  }
+}
