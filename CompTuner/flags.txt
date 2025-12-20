@@ -1,0 +1,10 @@
+-O1,
+-O2,
+-O3,
+-Ofast,
+-funroll-loops,
+-ftree-vectorize,
+-fprefetch-loop-arrays,
+-ffast-math,
+-funsafe-math-optimizations
+

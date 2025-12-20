@@ -1,0 +1,9 @@
+iteration:0 speedup:1.0054527787756915
+iteration:0 speedup:1.0013708599358957
+3: best_seq 1.0054527787756915, best_per [1, 0, 1, 1, 0, 0, 0, 0, 1]
+iteration:0 speedup:1.1629578643437222
+iteration:0 speedup:1.0887519284988427
+3: best_seq 1.1629578643437222, best_per [0, 0, 1, 0, 1, 1, 0, 0, 0]
+iteration:0 speedup:1.0435921423873324
+iteration:0 speedup:0.772567040382385
+3: best_seq 1.0435921423873324, best_per [1, 1, 1, 0, 0, 1, 1, 1, 0]

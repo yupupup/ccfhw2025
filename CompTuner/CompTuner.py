@@ -481,7 +481,8 @@ if __name__ == "__main__":
     com_params['random'] = 456
     com_params['source_path'] = args.source_path
     com_params['gcc_path'] = args.gcc_path
-    com_params['include_path'] = '-I /home/user/polybench-code/utilities /home/user/polybench-code/utilities/polybench.c'
+    #com_params['include_path'] = '-I /home/user/polybench-code/utilities /home/user/polybench-code/utilities/polybench.c'
+    com_params['include_path'] = ''
     com_params['exec_param'] = args.exec_param
     LOG_DIR = 'log' + os.sep
     LOG_FILE = LOG_DIR +  args.log_file
