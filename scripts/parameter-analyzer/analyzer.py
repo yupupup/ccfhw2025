@@ -7,8 +7,17 @@ from collections import Counter
 from datetime import datetime
 import numpy as np
 
+# --- Path Setup ---
+import os
+import sys
+# Add the 'scripts' directory to the path to allow sibling imports
+scripts_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if scripts_dir not in sys.path:
+    sys.path.insert(0, scripts_dir)
+# --- End Path Setup ---
+
 # 导入我们创建的模块
-import db_manager
+from utils import db_manager
 import performance_tester
 
 def load_config(filename='scripts/parameter-analyzer/config.ini'):
