@@ -1,0 +1,14 @@
+{
+    "hidden_sizes": [
+        128
+    ],
+    "num_classes": 4,
+    "input_size": 11,
+    "dropout_rate": 0.2,
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "batch_size": 32,
+    "epochs": 100,
+    "learning_rate": 0.001,
+    "patience": 10
+}
