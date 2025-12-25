@@ -59,6 +59,15 @@ Classification into 4 categories based on speedup ratio:
     - Plotting (optional).
     - Config loading.
 
+### 2.6 Dataset Generation (`generate_dataset.py`)
+- **Functionality**:
+    - **Dual Modes**:
+        - **Random Mode**: Uniformly samples parameters from defined ranges.
+        - **OpenTuner Mode**: Uses OpenTuner's evolutionary algorithms (e.g., AUC Bandit) to actively search for high-performance configurations.
+    - **Parallel Execution**: Supports multi-process execution (`--jobs`) to speed up data collection.
+    - **Noise Reduction**: Supports repeating benchmarks (`--repeats`) and averaging scores to mitigate runtime variance.
+    - **Output**: Generates a CSV file containing configuration vectors, performance ratios, and raw scores.
+
 ## 3. Implementation Steps
 1.  **Data Loader**: Implement `DataProcessor` class.
 2.  **Model**: Implement `MLPModel` class.

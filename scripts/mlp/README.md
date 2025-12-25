@@ -102,7 +102,16 @@ If you don't have PyTorch installed locally, you can use the provided Docker set
 - Scikit-learn
 - Docker (optional)
 
-### 6. Results
+### 6. Current Progress
+
+1. 测试目标程序。针对octane数据集中的richards.js测试程序进行
+2. 因为只针对单个程序做复现，当前模型的输入只包含参数配置序列而不包含特征向量
+3. 模型输出为预测当前配置序列在上述测试程序中能达到的加速比，加速比分为4类。
+4. 参数配置序列的选择：为了降低工作量，目前仅选用了10个参数作为调优目标参数，具体见代码。
+5. 测试数据集的生成：使用随机的方式生成500条配置序列，使用opentuner搜索的方式生成200条配置序列。
+6. 模型效果的评估：使用随机的方式生成70条数据作为测试数据集。在测试数据集上的评估模型准确率达到了80%
+
+### 7. Results
 
 The results of the model on the test set are as follows:
 
