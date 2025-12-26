@@ -1,225 +1,56 @@
 import os
-import random
-import subprocess
 import argparse
-import re
 import csv
-import json
-import time
 import multiprocessing
 import sys
-import math
 
-try:
-    import opentuner
-    from opentuner import ConfigurationManipulator
-    from opentuner.search.manipulator import IntegerParameter, BooleanParameter
-    from opentuner import MeasurementInterface
-    from opentuner import Result
-except ImportError as e:
-    print(f"Warning: Failed to import opentuner: {e}")
-    opentuner = None
+# Add scripts directory to path to allow imports from utils
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
+from scripts.utils.benchmark_runner import OctaneRunner
+from scripts.utils.config_generator import ConfigGenerator
+from scripts.utils.tuner_utils import V8TunerGen, opentuner
+from scripts.utils.parameters import Parameter, ParameterSpace
 
 # Define parameter space
-PARAMETERS = [
-    {"name": "turbo-inlining", "type": "bool", "default": True},
-    {"name": "use-osr", "type": "bool", "default": True},
-    {"name": "compact-on-every-full-gc", "type": "bool", "default": False},
-    {"name": "inline-new", "type": "bool", "default": True},
-    {"name": "max-optimized-bytecode-size", "type": "int", "default": 61440, "min": 30000, "max": 120000},
-    {"name": "max-inlined-bytecode-size", "type": "int", "default": 460, "min": 230, "max": 920},
-    {"name": "invocation-count-for-maglev", "type": "int", "default": 400, "min": 200, "max": 800},
-    {"name": "invocation-count-for-turbofan", "type": "int", "default": 3000, "min": 1500, "max": 6000},
-    {"name": "min-semi-space-size", "type": "int", "default": 0, "min": 0, "max": 8},
-    {"name": "stack-size", "type": "int", "default": 984, "min": 492, "max": 1968},
-    {"name": "baseline-batch-compilation-threshold", "type": "int", "default": 4096, "min": 2048, "max": 8192},
+parameters = [
+    Parameter("turbo-inlining", "bool", True),
+    Parameter("use-osr", "bool", True),
+    Parameter("compact-on-every-full-gc", "bool", False),
+    Parameter("inline-new", "bool", True),
+    Parameter("max-optimized-bytecode-size", "int", 61440, 30000, 120000),
+    Parameter("max-inlined-bytecode-size", "int", 460, 230, 920),
+    Parameter("invocation-count-for-maglev", "int", 400, 200, 800),
+    Parameter("invocation-count-for-turbofan", "int", 3000, 1500, 6000),
+    Parameter("min-semi-space-size", "int", 0, 0, 8),
+    Parameter("stack-size", "int", 984, 492, 1968),
+    Parameter("baseline-batch-compilation-threshold", "int", 4096, 2048, 8192),
 ]
-
-def generate_random_config():
-    config = {}
-    config_vector = []
-    
-    for param in PARAMETERS:
-        val = None
-        if param["type"] == "bool":
-            # Random boolean
-            val = random.choice([True, False])
-        elif param["type"] == "int":
-            # Random int in range [min, max]
-            val = random.randint(param["min"], param["max"])
-        
-        config[param["name"]] = val
-        
-        # Vector representation: True=1, False=0, Int=Int
-        if param["type"] == "bool":
-            config_vector.append(1 if val else 0)
-        else:
-            config_vector.append(val)
-            
-    return config, config_vector
-
-def get_default_config_vector():
-    config_vector = []
-    for param in PARAMETERS:
-        val = param["default"]
-        if param["type"] == "bool":
-            config_vector.append(1 if val else 0)
-        else:
-            config_vector.append(val)
-    return config_vector
-
-def get_config_vector_from_dict(config):
-    config_vector = []
-    for param in PARAMETERS:
-        val = config.get(param["name"], param["default"])
-        if param["type"] == "bool":
-            config_vector.append(1 if val else 0)
-        else:
-            config_vector.append(val)
-    return config_vector
-
-def build_cmd(d8_path, octane_dir, config, benchmark=None):
-    cmd = [d8_path]
-    for key, val in config.items():
-        if val is True:
-            cmd.append(f"--{key}")
-        elif val is False:
-            cmd.append(f"--no-{key}")
-        else:
-            cmd.append(f"--{key}={val}")
-    
-    if benchmark:
-        cmd.append("base.js")
-        cmd.append(f"{benchmark}.js")
-        cmd.append("-e")
-        js_code = (
-            "function PrintResult(name, result) { print(name + ': ' + result); }; "
-            "function PrintScore(score) { print('Score: ' + score); }; "
-            "BenchmarkSuite.RunSuites({NotifyResult: PrintResult, NotifyScore: PrintScore});"
-        )
-        cmd.append(js_code)
-    else:
-        cmd.append("run.js") 
-        
-    return cmd
-
-def run_benchmark_single(d8_path, octane_dir, config, benchmark=None):
-    cmd = build_cmd(d8_path, octane_dir, config, benchmark)
-    
-    try:
-        result = subprocess.run(
-            cmd, 
-            cwd=octane_dir,
-            capture_output=True, 
-            text=True, 
-            timeout=120
-        )
-        
-        if result.returncode != 0:
-            return None
-        
-        match = re.search(r"Score \(version \d+\): (\d+)", result.stdout)
-        if not match:
-             match = re.search(r"Score: (\d+)", result.stdout)
-             
-        if match:
-            return float(match.group(1))
-        else:
-            return None
-
-    except subprocess.TimeoutExpired:
-        return None
-    except Exception as e:
-        print(f"Exception: {e}")
-        return None
-
-def run_benchmark(d8_path, octane_dir, config, benchmark=None, repeats=1):
-    scores = []
-    for _ in range(repeats):
-        score = run_benchmark_single(d8_path, octane_dir, config, benchmark)
-        if score is not None:
-            scores.append(score)
-    
-    if not scores:
-        return None
-        
-    return sum(scores) / len(scores)
+parameter_space = ParameterSpace(parameters)
 
 def worker(args):
     """
     Worker function for parallel execution.
-    args: (d8_path, octane_dir, config, config_vector, default_score, benchmark, repeats)
+    args: (runner, config_generator, default_score, benchmark, repeats)
     """
-    d8_path, octane_dir, config, config_vector, default_score, benchmark, repeats = args
+    runner, config_generator, default_score, benchmark, repeats = args
     
-    score = run_benchmark(d8_path, octane_dir, config, benchmark, repeats)
+    # Generate random config
+    config, config_vector = config_generator.generate_random_config()
     
-    if score is not None:
-        ratio = score / default_score
-        return (config_vector, ratio, score)
-    else:
+    scores = []
+    for _ in range(repeats):
+        score = runner.run(config, benchmark=benchmark)
+        if score is not None:
+            scores.append(score)
+            
+    if not scores:
         return None
-
-# Global helper for OpenTuner to write to CSV
-_csv_writer = None
-_csv_file = None
-_d8_path = None
-_octane_dir = None
-_default_score = None
-_benchmark = None
-_repeats = 1
-
-if opentuner:
-    class V8TunerGen(MeasurementInterface):
-        def manipulator(self):
-            manipulator = ConfigurationManipulator()
-            for param in PARAMETERS:
-                if param["type"] == "bool":
-                    manipulator.add_parameter(BooleanParameter(param["name"]))
-                elif param["type"] == "int":
-                    manipulator.add_parameter(IntegerParameter(param["name"], param["min"], param["max"]))
-            return manipulator
-
-        def run(self, desired_result, input, limit):
-            cfg = desired_result.configuration.data
-            
-            # Convert OpenTuner 'True'/'False' string sometimes to bool if needed, but BooleanParameter handles it
-            # Just ensure types are correct
-            config = {}
-            for param in PARAMETERS:
-                val = cfg[param["name"]]
-                # OpenTuner BooleanParameter uses True/False
-                config[param["name"]] = val
-
-            score = run_benchmark(_d8_path, _octane_dir, config, _benchmark, _repeats)
-            
-            if score is None:
-                return Result(time=float('inf')) # Penalize failure
-
-            # Calculate ratio
-            ratio = score / _default_score
-            config_vector = get_config_vector_from_dict(config)
-            
-            # Write to CSV
-            # Note: This might have concurrency issues if OpenTuner runs in parallel, 
-            # but standard opentuner run is sequential in the main loop usually, 
-            # unless using parallel technique. For safety, we should lock or open/close.
-            # But simple print to file might be atomic enough for lines.
-            if _csv_writer:
-                _csv_writer.writerow([config_vector, ratio, score])
-                if _csv_file:
-                    _csv_file.flush()
-            
-            print(f"OpenTuner Sample: Ratio={ratio:.4f} (Score={score})")
-
-            # OpenTuner minimizes time. We maximize score.
-            # So return -score or 1/score. 
-            # Let's use -score.
-            return Result(time=-score)
-
-        def save_final_config(self, configuration):
-            # Optional: save best config
-            pass
+        
+    avg_score = sum(scores) / len(scores)
+    ratio = avg_score / default_score
+    
+    return (config_vector, ratio, avg_score)
 
 def main():
     parser = argparse.ArgumentParser(description="Generate dataset for V8 tuning")
@@ -245,36 +76,37 @@ def main():
         print(f"Error: d8 not found at {args.d8_path}")
         return
 
+    # Initialize utilities
+    config_generator = ConfigGenerator(parameter_space)
+    runner = OctaneRunner(args.d8_path, octane_dir)
+
     print("Measuring default performance...")
-    default_config = {p["name"]: p["default"] for p in PARAMETERS}
-    default_score = run_benchmark(args.d8_path, octane_dir, default_config, args.benchmark, args.repeats)
+    default_config = {p.name: p.default for p in parameter_space}
     
-    if default_score is None:
+    # Run default config
+    default_scores = []
+    for _ in range(args.repeats):
+        s = runner.run(default_config, benchmark=args.benchmark)
+        if s is not None:
+            default_scores.append(s)
+    
+    if not default_scores:
         print("Failed to run default configuration. Aborting.")
         return
         
+    default_score = sum(default_scores) / len(default_scores)
     print(f"Default Score: {default_score}")
     
-    # Globals for OpenTuner
-    global _d8_path, _octane_dir, _default_score, _benchmark, _repeats, _csv_writer, _csv_file
-    _d8_path = args.d8_path
-    _octane_dir = octane_dir
-    _default_score = default_score
-    _benchmark = args.benchmark
-    _repeats = args.repeats
-
     # Append mode if file exists, else 'w'
     file_mode = 'a' if os.path.exists(args.output) else 'w'
     
     with open(args.output, file_mode, newline='') as f:
-        _csv_file = f
         writer = csv.writer(f)
-        _csv_writer = writer
         
         # If new file, write header and default
         if file_mode == 'w':
             writer.writerow(["config_sequence", "performance_ratio", "score"])
-            writer.writerow([get_default_config_vector(), 1.0, default_score])
+            writer.writerow([config_generator.get_default_config_vector(), 1.0, default_score])
         
         if args.mode == "opentuner":
             if not opentuner:
@@ -282,27 +114,36 @@ def main():
                 return
             
             print(f"Starting OpenTuner for {args.samples} samples (approx)...")
-            # OpenTuner arguments
-            # We construct a fake argv for OpenTuner
-            # We want to run for 'samples' iterations potentially.
-            # OpenTuner runs by time or no-improvement. 
-            # We can use --test-limit to limit number of evaluations? 
-            # measurement_interface.py has --test-limit arg.
             
             ot_args = opentuner.default_argparser().parse_args(unknown)
             ot_args.test_limit = args.samples
             ot_args.no_dups = True 
             
-            # Enable parallelism if jobs > 1
             if args.jobs > 1:
                 ot_args.parallelism = args.jobs
             
-            V8TunerGen.main(ot_args)
+            # Pass repeats via args to tuner if needed, or handle in tuner
+            ot_args.repeats = args.repeats
+
+            def result_callback(config_vector, ratio, score):
+                writer.writerow([config_vector, ratio, score])
+                f.flush()
+
+            # Instantiate V8TunerGen
+            interface = V8TunerGen(
+                ot_args, 
+                runner=runner, 
+                config_generator=config_generator, 
+                default_score=default_score,
+                result_callback=result_callback
+            )
+            
+            from opentuner.tuning.tuner import TuningRunManager
+            TuningRunManager(interface, ot_args).minimize()
             
         else:
             # Random Mode
             valid_samples = 0
-            tried = 0
             
             print(f"Generating {args.samples} samples with {args.jobs} jobs (Random Mode)...")
             
@@ -314,19 +155,15 @@ def main():
                 
                 tasks = []
                 for _ in range(batch_size):
-                    config, config_vector = generate_random_config()
-                    tasks.append((args.d8_path, octane_dir, config, config_vector, default_score, args.benchmark, args.repeats))
+                    tasks.append((runner, config_generator, default_score, args.benchmark, args.repeats))
                 
                 results = pool.map(worker, tasks)
                 
                 for res in results:
-                    tried += 1
                     if res:
                         writer.writerow(res)
                         valid_samples += 1
                         print(f"Sample {valid_samples}/{args.samples}: Ratio={res[1]:.4f} (Score={res[2]})")
-                    else:
-                         pass
                          
                     if valid_samples >= args.samples:
                         break

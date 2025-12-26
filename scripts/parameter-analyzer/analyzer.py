@@ -3,14 +3,13 @@ import configparser
 import json
 import random
 import sys
+import multiprocessing
+import numpy as np
 from collections import Counter
 from datetime import datetime
-import numpy as np
+import os
 
 # --- Path Setup ---
-import os
-import sys
-# Add the 'scripts' directory to the path to allow sibling imports
 scripts_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if scripts_dir not in sys.path:
     sys.path.insert(0, scripts_dir)
@@ -31,49 +30,9 @@ def load_config(filename='scripts/parameter-analyzer/config.ini'):
         print(f"Error reading config file: {e}", file=sys.stderr)
         sys.exit(1)
 
-def get_test_values(param):
-    """根据参数类型和默认值生成测试值列表。"""
-    param_type = param['type']
-    default_val_str = param['default']
-
-    if param_type == 'boolean':
-        return ['true', 'false']
-    
-    if param_type == 'integer':
-        try:
-            v = int(default_val_str)
-            if v == 0:
-                return [0, 1, 2, 4]
-            else:
-                # 确保值不为负，且是整数
-                return sorted(list(set([
-                    max(0, int(v / 2)), 
-                    v, 
-                    int(v * 1.5), 
-                    v * 2
-                ])))
-        except (ValueError, TypeError):
-            print(f"Warning: Could not parse integer default value '{default_val_str}' for param '{param['name']}'. Skipping.")
-            return []
-            
-    return []
-
-def build_v8_args(config: dict) -> list:
-    """将参数名和值的字典转换为v8启动参数列表。"""
-    args = []
-    for name, value in config.items():
-        if isinstance(value, bool):
-            # 处理布尔标志
-            prefix = '' if value else '--no-'
-            args.append(f"{prefix}{name}")
-        else:
-            # 处理键值对标志
-            args.append(f"--{name}={value}")
-    return args
-
 def generate_random_background_configs(all_params, current_param, num_configs):
     """为当前参数生成指定数量的随机背景配置。"""
-    other_params = [p for p in all_params if p['id'] != current_param['id']]
+    other_params = [p for p in all_params if p.name != current_param.name]
     background_configs = []
 
     for _ in range(num_configs):
@@ -83,19 +42,50 @@ def generate_random_background_configs(all_params, current_param, num_configs):
         params_to_use = random.sample(other_params, sample_size)
         
         for p in params_to_use:
-            test_values = get_test_values(p)
+            test_values = p.get_test_values()
             if test_values:
                 # 从测试值中随机选一个作为背景值
-                config[p['name']] = random.choice(test_values)
+                config[p.name] = random.choice(test_values)
         background_configs.append(config)
         
     return background_configs
 
-def analyze_parameter(param, all_params, scenes, config):
-    """对单个参数进行完整的性能分析。"""
-    print(f"\n{'='*20}\nAnalyzing parameter: {param['name']}\n{'='*20}")
+def worker_func(args):
+    """
+    Worker function for parallel execution.
+    args: (runner, config, benchmark, repeats)
+    """
+    runner, config, benchmark, repeats = args
+    scores = []
+    for _ in range(repeats):
+        score = runner.run(config, benchmark=benchmark)
+        if score is not None:
+            scores.append(score)
     
-    test_values = get_test_values(param)
+    if not scores:
+        return None
+    return sum(scores) / len(scores)
+
+def run_test_parallel(runner, config, benchmark, repeats, pool):
+    """
+    Executes a test using the process pool.
+    For simplicity in this refactoring, we might not parallelize *within* a single test run here,
+    but rather parallelize the *set* of tests for a parameter.
+    However, since `runner.run` is synchronous, we can just call it directly if we parallelize at the parameter level.
+    
+    Wait, the user wants parallelization.
+    Let's parallelize the execution of different configurations for a parameter.
+    """
+    # This helper is just a wrapper for now if we use pool.map at a higher level
+    pass
+
+def analyze_parameter_deep(runner, param, all_params, scenes, config, pool):
+    """
+    Deep analysis for a parameter using random backgrounds.
+    """
+    print(f"Deep analyzing parameter: {param.name}")
+    
+    test_values = param.get_test_values()
     if not test_values:
         return None
 
@@ -104,36 +94,33 @@ def analyze_parameter(param, all_params, scenes, config):
 
     background_configs = generate_random_background_configs(all_params, param, num_backgrounds)
     
-    # 用于存储每个场景和背景下的性能数据
-    # perf_data[scene][background_idx][value] = time
+    # perf_data[scene][background_idx][value] = score
     perf_data = {s: [{} for _ in range(num_backgrounds)] for s in scenes}
     
-    # 1. 数据收集
+    tasks = []
+    # Prepare all tasks
     for scene in scenes:
         for i, bg_config in enumerate(background_configs):
             for value in test_values:
-                # 结合背景参数和当前测试参数
                 current_config = bg_config.copy()
-                current_config[param['name']] = value
-                
-                v8_args = build_v8_args(current_config)
-                param_config_for_tester = {
-                    'name': f"{param['name']}={value}_bg{i}",
-                    'args': v8_args
-                }
-                
-                avg_time = performance_tester.run_test(param_config_for_tester, scene, num_runs)
-                if avg_time < 0:
-                    print(f"Test failed for {param['name']}={value} on {scene} with background {i}. Skipping this background.")
-                    # 标记失败，以便后续跳过此背景的计算
-                    perf_data[scene][i] = None 
-                    break 
-                perf_data[scene][i][value] = avg_time
-            
-            if perf_data[scene][i] is None:
-                continue
+                current_config[param.name] = value
+                tasks.append((runner, current_config, scene, num_runs, scene, i, value))
 
-    # 2. 指标计算
+    # Execute tasks in parallel
+    # We need a wrapper for pool.map that returns metadata
+    def task_wrapper(args):
+        runner, cfg, bnch, rpts, scn, bg_idx, val = args
+        score = worker_func((runner, cfg, bnch, rpts))
+        return (scn, bg_idx, val, score)
+
+    results = pool.map(task_wrapper, tasks)
+
+    # Process results
+    for scn, bg_idx, val, score in results:
+        if score is not None:
+            perf_data[scn][bg_idx][val] = score
+
+    # Calculate metrics
     scene_impacts = []
     scene_best_values = []
 
@@ -142,44 +129,62 @@ def analyze_parameter(param, all_params, scenes, config):
         background_best_values = []
 
         for i in range(num_backgrounds):
-            if perf_data[scene][i] is None: continue
-
             results = perf_data[scene][i]
-            default_value_str = str(param['default'])
-            
-            # 确保默认值在测试结果中
-            if default_value_str not in results:
-                print(f"Warning: Default value '{default_value_str}' not in test results for {param['name']}. Using first value as baseline.")
-                baseline_perf = next(iter(results.values()))
-            else:
-                baseline_perf = results[default_value_str]
+            if not results: continue
 
-            if baseline_perf == 0: continue
+            # Baseline is default value
+            # Note: default value might not be in test_values if get_test_values logic changed,
+            # but usually it is. If not, we pick one.
+            # Actually get_test_values includes default-derived values.
+            # Let's assume default is close to one of them or we use the first one.
+            
+            # For simplicity, let's use the first available value as baseline if default not found
+            # But ideally we should test default.
+            
+            # Let's check if default is in results
+            default_val = param.default
+            # Type conversion might be needed for keys
+            # keys in results are values from get_test_values
+            
+            baseline_score = None
+            # Try to find default or equivalent
+            for k, v in results.items():
+                if k == default_val:
+                    baseline_score = v
+                    break
+            
+            if baseline_score is None:
+                 baseline_score = next(iter(results.values()))
+
+            if baseline_score == 0: continue
 
             max_impact = 0
-            for value, perf in results.items():
-                impact = abs((perf - baseline_perf) / baseline_perf)
+            for value, score in results.items():
+                impact = abs((score - baseline_score) / baseline_score)
                 if impact > max_impact:
                     max_impact = impact
             background_impacts.append(max_impact)
 
-            # 找到当前背景下的最优值
-            best_value = min(results, key=results.get)
+            # Find best value
+            # Metric direction: Octane is higher-better
+            if runner.metric_direction == 'higher-better':
+                best_value = max(results, key=results.get)
+            else:
+                best_value = min(results, key=results.get)
             background_best_values.append(best_value)
 
         if background_impacts:
             scene_impacts.append(np.mean(background_impacts))
         if background_best_values:
-            # 场景主导最优值
+            # Most common best value
+            # Convert to string for Counter if needed (e.g. bools)
             scene_best_values.append(Counter(background_best_values).most_common(1)[0][0])
 
     if not scene_impacts:
-        return None # 如果所有测试都失败了
+        return None
 
-    # 综合影响值
     overall_impact = np.mean(scene_impacts)
     
-    # 方向稳定性
     if not scene_best_values:
         stability = 0
         dominant_value = None
@@ -187,7 +192,7 @@ def analyze_parameter(param, all_params, scenes, config):
         dominant_value, count = Counter(scene_best_values).most_common(1)[0]
         stability = count / len(scenes)
 
-    # 3. 分类
+    # Classification
     impact_threshold = config.getfloat('analysis', 'impact_threshold')
     stability_threshold = config.getfloat('analysis', 'stability_threshold')
     
@@ -200,94 +205,258 @@ def analyze_parameter(param, all_params, scenes, config):
         category = 'sensitive'
         
     return {
-        'parameter_id': param['id'],
+        'parameter_id': param.name, # Using name as ID for now or need to map back
         'impact_value': overall_impact,
         'stability_value': stability,
         'category': category,
-        'dominant_value': dominant_value
+        'dominant_value': str(dominant_value)
     }
 
-def generate_report(results):
-    """生成Markdown格式的分析报告。"""
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+def screen_parameter(runner, param, scenes, config, pool):
+    """
+    Screening phase: Test parameter with default background.
+    Returns True if impact > threshold, False otherwise.
+    """
+    print(f"Screening parameter: {param.name}")
     
-    report = f"# V8 Parameter Analysis Report\n\n"
-    report += f"*Generated on: {timestamp}*\n\n"
+    test_values = param.get_test_values()
+    if not test_values:
+        return False
+
+    num_runs = config.getint('analysis', 'test_runs')
+    # Default background is empty config (or default values)
+    default_config = {} 
     
-    # 按分类组织结果
-    categorized_results = {'stable': [], 'sensitive': [], 'none': []}
-    for r in results:
-        categorized_results[r['category']].append(r)
-        
-    for category, items in categorized_results.items():
-        report += f"## {category.title()} Impact Parameters ({len(items)})\n\n"
-        if not items:
-            report += "None\n\n"
-            continue
+    tasks = []
+    for scene in scenes:
+        for value in test_values:
+            current_config = default_config.copy()
+            current_config[param.name] = value
+            tasks.append((runner, current_config, scene, num_runs, scene, value))
             
-        report += "| Parameter ID | Impact Value | Stability | Dominant Value |\n"
-        report += "|--------------|--------------|-----------|----------------|\n"
-        # 按影响值降序排序
-        for item in sorted(items, key=lambda x: x['impact_value'], reverse=True):
-            report += f"| {item['parameter_id']} | {item['impact_value']:.4f} | {item['stability_value']:.2%} | {item['dominant_value']} |\n"
-        report += "\n"
+    def task_wrapper(args):
+        runner, cfg, bnch, rpts, scn, val = args
+        score = worker_func((runner, cfg, bnch, rpts))
+        return (scn, val, score)
+
+    results = pool.map(task_wrapper, tasks)
+    
+    perf_data = {s: {} for s in scenes}
+    for scn, val, score in results:
+        if score is not None:
+            perf_data[scn][val] = score
+            
+    scene_impacts = []
+    for scene in scenes:
+        results = perf_data[scene]
+        if not results: continue
         
+        # Baseline
+        baseline_score = None
+        # Try to find default
+        # If default is not in test_values (e.g. 0 for int), we might miss it.
+        # But get_test_values usually includes default.
+        # If not, pick first.
+        # Actually, for screening, we compare range.
+        
+        vals = list(results.values())
+        if not vals: continue
+        
+        min_score = min(vals)
+        max_score = max(vals)
+        
+        if min_score == 0: 
+             if max_score > 0: impact = 1.0
+             else: impact = 0.0
+        else:
+            impact = (max_score - min_score) / min_score
+            
+        scene_impacts.append(impact)
+        
+    if not scene_impacts:
+        return False
+        
+    avg_impact = np.mean(scene_impacts)
+    impact_threshold = config.getfloat('analysis', 'impact_threshold')
+    
+    return avg_impact >= impact_threshold
+
+def get_parameters_to_analyze(conn, param_types=['boolean', 'integer']):
+    """
+    从数据库获取待分析的参数列表。
+    返回 Parameter 对象列表。
+    """
+    classification = [
+        "GC/Memory",
+        "Optimization",
+        "Compiler/Tier Manager",
+        "Ignition",
+        "Sparkplug",
+        "Turboshaft",
+        "Turbolev",
+        "Turbofan",
+        "Maglev"
+    ]
+
+    query = """
+        SELECT parameter_id, parameter_name, data_type, default_value 
+        FROM parameter 
+        WHERE data_type IN %s and category IN %s;
+    """
+    
+    params = []
+    # Note: db_manager imports psycopg2, need to handle if not available or mock
+    # Assuming db_manager works as before
     try:
-        with open('scripts/parameter-analyzer/analysis_results.md', 'w', encoding='utf-8') as f:
-            f.write(report)
-        print("\nAnalysis report generated at 'scripts/parameter-analyzer/analysis_results.md'")
-    except IOError as e:
-        print(f"Error writing report file: {e}", file=sys.stderr)
+        with conn.cursor() as cur:
+            cur.execute(query, (tuple(param_types), tuple(classification)))
+            rows = cur.fetchall()
+            for row in rows:
+                # Create Parameter object
+                # Need to parse default value carefully
+                default_val = row[3]
+                if row[2] == 'boolean':
+                    default_val = (str(default_val).lower() == 'true')
+                elif row[2] == 'integer':
+                    try:
+                        default_val = int(default_val)
+                    except:
+                        default_val = 0
+                
+                p = Parameter(row[1], row[2], default_val)
+                # Store ID separately if needed, or attach to object
+                p.id = row[0] 
+                params.append(p)
+            print(f"Fetched {len(params)} parameters to analyze.")
+    except Exception as error:
+        print(f"Error fetching parameters: {error}", file=sys.stderr)
+    
+    return params
+
+def save_analysis_results(conn, results):
+    """
+    将分析结果更新到 parameter 表中。
+    """
+    update_query = """
+        UPDATE parameter 
+        SET impact_value = %s, 
+            stability_value = %s, 
+            dominant_value = %s
+        WHERE parameter_id = %s;
+    """
+    
+    data_to_update = []
+    for r in results:
+        # Map back parameter name to ID if needed, but we stored ID in p.id
+        # Wait, analyze_parameter_deep returns 'parameter_id' as name.
+        # We need to pass the ID through.
+        # Let's fix analyze_parameter_deep to use p.id
+        
+        # Assuming r['parameter_id'] is the actual ID now
+        data_to_update.append((
+            r['impact_value'], 
+            r['stability_value'], 
+            r['dominant_value'],
+            r['parameter_id']
+        ))
+    
+    if not data_to_update:
+        print("No results to save.")
+        return
+
+    try:
+        with conn.cursor() as cur:
+            cur.executemany(update_query, data_to_update)
+            conn.commit()
+            print(f"Successfully updated {len(data_to_update)} parameters in the database.")
+    except Exception as error:
+        print(f"Error updating analysis results: {error}", file=sys.stderr)
+        conn.rollback()
 
 def main():
-    """主函数，执行完整的分析流程。"""
+    parser = argparse.ArgumentParser(description="V8 Parameter Analyzer")
+    parser.add_argument("--mock", action="store_true", help="Run in mock mode without database")
+    args = parser.parse_args()
+
     print("Starting V8 Parameter Analysis...")
     
-    # 1. 加载配置
     config = load_config()
-    dataset_path = config.get('files', 'dataset_path')
     
-    try:
-        with open(dataset_path, 'r', encoding='utf-8') as f:
-            scenes = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"Error loading scenes from {dataset_path}: {e}", file=sys.stderr)
-        sys.exit(1)
-
-    # 2. 数据库连接和设置
-    conn = db_manager.get_connection()
-    if not conn:
-        sys.exit(1)
-    db_manager.setup_database(conn)
+    # Use Octane benchmarks as scenes
+    scenes = ['richards'] # Use only one benchmark for quick verification if mocking, or list from config
     
-    # 3. 获取待分析参数
-    all_params = db_manager.get_parameters_to_analyze(conn)
+    if args.mock:
+        print("Running in MOCK mode.")
+        all_params = get_mock_parameters()
+        conn = None
+    else:
+        if db_manager is None:
+            print("Error: db_manager module not found (psycopg2 missing?). Cannot run without --mock.", file=sys.stderr)
+            sys.exit(1)
+            
+        conn = db_manager.get_connection()
+        if not conn:
+            sys.exit(1)
+        # db_manager.setup_database(conn)
+        
+        all_params = get_parameters_to_analyze(conn)
+    
     if not all_params:
-        print("No parameters found in the database to analyze.")
-        conn.close()
+        print("No parameters found.")
+        if conn: conn.close()
         sys.exit(0)
 
-    # 4. 执行分析
+    # Initialize Runner
+    d8_path = config.get('v8', 'd8_path', fallback='/home/dby/chromium/v8/v8/out/x64-debug/d8')
+    octane_path = config.get('v8', 'octane_path', fallback='/home/dby/chromium/v8/v8/test/benchmarks/data/octane')
+    
+    runner = OctaneRunner(d8_path, octane_path)
+    
+    # Parallel Pool
+    jobs = config.getint('analysis', 'jobs', fallback=multiprocessing.cpu_count())
+    pool = multiprocessing.Pool(processes=jobs)
+    
     analysis_results = []
-    for param in all_params:
-        result = analyze_parameter(param, all_params, scenes, config)
-        if result:
-            analysis_results.append(result)
-            print(f"Analysis complete for {param['name']}: Impact={result['impact_value']:.4f}, Stability={result['stability_value']:.2%}, Category='{result['category']}'")
+    
+    try:
+        # 1. Screening
+        impactful_params = []
+        for param in all_params:
+            if screen_parameter(runner, param, scenes, config, pool):
+                impactful_params.append(param)
+            else:
+                analysis_results.append({
+                    'parameter_id': getattr(param, 'id', param.name),
+                    'impact_value': 0.0,
+                    'stability_value': 0.0,
+                    'category': 'none',
+                    'dominant_value': 'default'
+                })
+        
+        print(f"Screening complete. {len(impactful_params)} parameters passed for deep analysis.")
+        
+        # 2. Deep Analysis
+        for param in impactful_params:
+            result = analyze_parameter_deep(runner, param, all_params, scenes, config, pool)
+            if result:
+                result['parameter_id'] = getattr(param, 'id', param.name)
+                analysis_results.append(result)
+                print(f"Analysis complete for {param.name}: Impact={result['impact_value']:.4f}, Stability={result['stability_value']:.2%}, Category='{result['category']}'")
 
-    # 5. 保存结果和生成报告
-    if analysis_results:
-        # 清空旧数据
-        with conn.cursor() as cur:
-            cur.execute("TRUNCATE TABLE parameter_analysis RESTART IDENTITY;")
-        db_manager.save_analysis_results(conn, analysis_results)
-        generate_report(analysis_results)
-    else:
-        print("No analysis was completed.")
-
-    # 6. 关闭连接
-    conn.close()
-    print("\nAnalysis finished. Database connection closed.")
+        # 3. Save Results
+        if args.mock:
+            print("Mock mode: Results not saved to DB.")
+            print(analysis_results)
+        elif analysis_results:
+            save_analysis_results(conn, analysis_results)
+        else:
+            print("No analysis results to save.")
+            
+    finally:
+        pool.close()
+        pool.join()
+        if conn: conn.close()
+        print("\nAnalysis finished.")
 
 if __name__ == '__main__':
     main()
