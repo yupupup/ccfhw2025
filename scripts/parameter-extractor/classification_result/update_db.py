@@ -62,14 +62,14 @@ def update_database_categories(conn, categories):
         with conn.cursor() as cur:
             for name, category in categories.items():
                 # Convert kebab-case from CSV to snake_case for DB
-                db_param_name = name.replace('-', '_')
-                cur.execute(update_query, (category, db_param_name))
+                # db_param_name = name.replace('-', '_')
+                cur.execute(update_query, (category, name))
                 if cur.rowcount > 0:
                     updated_count += 1
                 else:
                     skipped_count += 1
                     # This warning is useful for debugging mismatches
-                    print(f"  - WARNING: Parameter '{db_param_name}' (from CSV: '{name}') not found in the database. Skipped.")
+                    print(f"  - WARNING: Parameter '{name}' (from CSV: '{name}') not found in the database. Skipped.")
             conn.commit()
             print(f"\nSuccessfully updated {updated_count} parameter categories in the database.")
             if skipped_count > 0:
