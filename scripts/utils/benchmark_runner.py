@@ -31,10 +31,17 @@ class BenchmarkRunnerD8(BenchmarkRunner):
 
     @abstractmethod
     def build_cmd(self, config, **kwargs):
-        """
-        Builds the command line arguments for d8.
-        """
-        pass
+        cmd = [self.d8_path]
+        
+        # Add flags from config
+        for key, val in config.items():
+            if val is True:
+                cmd.append(f"--{key}")
+            elif val is False:
+                cmd.append(f"--no-{key}")
+            else:
+                cmd.append(f"--{key}={val}")
+        return cmd
 
     @abstractmethod
     def parse_output(self, output):
@@ -60,7 +67,7 @@ class BenchmarkRunnerD8(BenchmarkRunner):
             )
 
             if result.returncode != 0:
-                # print(f"Error running benchmark: {result.stderr}") # Optional logging
+                print(f"Error running benchmark: {result.stderr}\ncmd: {cmd}") # Optional logging
                 return None
 
             return self.parse_output(result.stdout)
@@ -80,16 +87,7 @@ class OctaneRunner(BenchmarkRunnerD8):
         self.octane_dir = octane_dir
 
     def build_cmd(self, config, benchmark=None, **kwargs):
-        cmd = [self.d8_path]
-        
-        # Add flags from config
-        for key, val in config.items():
-            if val is True:
-                cmd.append(f"--{key}")
-            elif val is False:
-                cmd.append(f"--no-{key}")
-            else:
-                cmd.append(f"--{key}={val}")
+        cmd = super().build_cmd(config, **kwargs)
 
         if benchmark:
             cmd.append("base.js")
