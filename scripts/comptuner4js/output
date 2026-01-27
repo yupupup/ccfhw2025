@@ -1,0 +1,233 @@
+Fetching baseline score...
+Baseline score: 31504.0
+[0, 1, 0, 0, 51763, 556, 524, 1557, 3, 906, 7398]
+[1, 1, 1, 0, 81146, 274, 708, 3105, 7, 1181, 7576]
+Generated initial instances. initial_indep: [[0, 1, 0, 0, 51763, 556, 524, 1557, 3, 906, 7398], [1, 1, 1, 0, 81146, 274, 708, 3105, 7, 1181, 7576]], initial_dep: [0.3371635347892331, 0.5795454545454546]
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 38212, 633, 614, 2135, 1, 632, 5345], acc: 1.577919744459972, label: 0.15899568308786186
+Append new sample: [0, 1, 1, 0, 103234, 559, 362, 1937, 2, 1474, 6094], acc: 0.5537356321839079, label: 0.287201625190452
+Updating the model, np.mean(all_acc)=1.06582768832194
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 43284, 692, 433, 2410, 1, 601, 3484], acc: 0.2404865390853065, label: 0.29358176739461656
+Append new sample: [1, 0, 0, 0, 87017, 304, 243, 5627, 3, 1907, 2421], acc: 0.40019786624054154, label: 0.6753745556119858
+Updating the model, np.mean(all_acc)=0.6930849454924319
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 37947, 451, 602, 2563, 2, 826, 4659], acc: 0.9240681876441939, label: 0.12382554596241747
+Append new sample: [1, 1, 0, 1, 42299, 532, 342, 1974, 0, 660, 2682], acc: 0.05228925829043943, label: 0.37617445403758254
+Updating the model, np.mean(all_acc)=0.6247828713173934
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 1, 1, 36398, 491, 581, 2510, 2, 725, 3350], acc: 0.4308865937212392, label: 0.3104050279329609
+Append new sample: [1, 1, 1, 0, 69982, 401, 760, 3500, 0, 1929, 2218], acc: 0.21486669190416946, label: 0.5869413407821229
+Updating the model, np.mean(all_acc)=0.5493063141912212
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 1, 0, 33369, 516, 614, 2755, 2, 577, 3345], acc: 0.2978957799020749, label: 0.2722828847130523
+Append new sample: [0, 1, 0, 0, 104234, 629, 459, 4647, 0, 1919, 5450], acc: 1.44469433123379, label: 0.17134332148298628
+Updating the model, np.mean(all_acc)=0.6137040624665635
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 1, 51814, 771, 604, 2827, 1, 674, 5027], acc: 0.28410184442662395, label: 0.15832910106653122
+Append new sample: [0, 0, 1, 1, 58392, 824, 306, 5427, 2, 1614, 7807], acc: 0.15294281560455533, label: 0.26199847638395124
+Updating the model, np.mean(all_acc)=0.5478404403914011
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 1, 43423, 853, 641, 2840, 1, 1671, 5980], acc: 0.43483944954128434, label: 0.30446927374301674
+Append new sample: [0, 1, 1, 0, 59693, 404, 443, 2037, 1, 1533, 2480], acc: 0.2699207800121876, label: 0.31253174200101574
+Updating the model, np.mean(all_acc)=0.5199175367321632
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 51487, 762, 596, 2664, 2, 496, 5191], acc: 0.4937711022840123, label: 0.12785678009141696
+Append new sample: [1, 0, 1, 1, 83218, 357, 723, 2086, 3, 1102, 5513], acc: 0.029479368775061403, label: 0.4907948197054342
+Updating the model, np.mean(all_acc)=0.487630999081835
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 1, 59726, 731, 595, 2805, 3, 665, 4675], acc: 0.28115453567586934, label: 0.26558532249873035
+Append new sample: [1, 0, 0, 0, 35469, 371, 791, 5519, 6, 1096, 4905], acc: 0.2390468852152798, label: 0.6797232097511428
+Updating the model, np.mean(all_acc)=0.46234985590002825
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 50759, 683, 601, 4289, 2, 673, 5655], acc: 0.29753685643002964, label: 0.13995048247841543
+Append new sample: [0, 0, 1, 0, 102826, 330, 386, 3730, 1, 1680, 6383], acc: 2.5632411167512696, label: 0.1250634840020315
+Updating the model, np.mean(all_acc)=0.5591537689690904
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 36122, 475, 608, 4660, 0, 1631, 5967], acc: 0.27285850991114136, label: 0.2321927374301676
+Append new sample: [0, 0, 0, 1, 84910, 612, 385, 4145, 7, 1054, 7211], acc: 0.06388122227698353, label: 0.2576180802437786
+Updating the model, np.mean(all_acc)=0.5236279596168152
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 93436, 665, 608, 3214, 2, 822, 5060], acc: 0.30491006744941296, label: 0.2541264601320467
+Append new sample: [1, 0, 0, 0, 56330, 620, 333, 5994, 7, 1870, 7033], acc: 0.3414846959974147, label: 0.6875634840020315
+Updating the model, np.mean(all_acc)=0.5069254114590317
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 1, 0, 38199, 430, 596, 3424, 1, 809, 4623], acc: 0.2711833520809902, label: 0.14109319451498223
+Append new sample: [1, 1, 0, 0, 75513, 814, 625, 3708, 5, 1497, 3450], acc: 0.3222685337726525, label: 0.38534789233113254
+Updating the model, np.mean(all_acc)=0.49075622157193854
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 1, 0, 60174, 415, 604, 4731, 1, 725, 5070], acc: 0.28646844168130814, label: 0.2348590655154901
+Append new sample: [1, 1, 0, 1, 98922, 731, 534, 4692, 2, 1823, 6863], acc: 0.36543220453623126, label: 0.7039423565261554
+Updating the model, np.mean(all_acc)=0.4789843716817122
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 1, 0, 111933, 417, 474, 3416, 1, 1644, 5702], acc: 0.46442074776197945, label: 0.12055611985779584
+Append new sample: [0, 0, 1, 1, 36743, 323, 530, 4696, 5, 908, 4307], acc: 0.9248217726396915, label: 0.13179278821736923
+Updating the model, np.mean(all_acc)=0.49336016424965373
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 1, 0, 47833, 341, 566, 3999, 1, 1087, 5528], acc: 0.40759927564351317, label: 0.2453974098527171
+Append new sample: [0, 1, 1, 0, 75074, 230, 325, 3212, 4, 1734, 3612], acc: 0.2582053336385488, label: 0.27732986287455563
+Updating the model, np.mean(all_acc)=0.48333154802411493
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 1, 0, 98776, 426, 516, 3569, 1, 1558, 5815], acc: 0.3455445045952411, label: 0.25212671406805487
+Append new sample: [1, 0, 1, 1, 87729, 761, 675, 3864, 1, 1401, 2931], acc: 0.26037196404666263, label: 0.6639156932453022
+Updating the model, np.mean(all_acc)=0.4727213531003995
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 39293, 356, 599, 5134, 7, 567, 4260], acc: 0.19805852806289637, label: 0.1453466226510919
+Append new sample: [1, 1, 0, 0, 67100, 377, 544, 4748, 6, 1313, 2132], acc: 0.651824555403557, label: 0.3712544438801422
+Updating the model, np.mean(all_acc)=0.4700669191355566
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 48153, 671, 601, 4329, 4, 703, 4522], acc: 0.1497203838517539, label: 0.19184865413915694
+Append new sample: [1, 0, 1, 1, 118117, 899, 779, 3592, 2, 1373, 4146], acc: 0.4268663778740419, label: 0.9525774504824784
+Updating the model, np.mean(all_acc)=0.4604998908054167
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 1, 1, 42460, 363, 600, 5994, 7, 571, 5141], acc: 0.37990413421210306, label: 0.264886998476384
+Append new sample: [1, 0, 0, 1, 65074, 577, 552, 3144, 2, 562, 3103], acc: 0.07191264529763981, label: 0.45057770441848655
+Updating the model, np.mean(all_acc)=0.4487703157528893
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 52817, 577, 599, 2893, 0, 564, 5524], acc: 0.08235611510791364, label: 0.17648552564753683
+Append new sample: [1, 1, 0, 1, 102402, 456, 666, 2462, 0, 882, 7065], acc: 0.1827145917855677, label: 0.6963242762823768
+Updating the model, np.mean(all_acc)=0.4337115080240251
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 39044, 477, 596, 3642, 0, 843, 4816], acc: 0.30822071767095466, label: 0.23441467750126968
+Append new sample: [1, 0, 1, 1, 49618, 740, 738, 4742, 6, 876, 5369], acc: 0.4127928830973561, label: 1.0133316404266124
+Updating the model, np.mean(all_acc)=0.430384021313122
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 51509, 750, 605, 4350, 7, 522, 5181], acc: 0.21376623376623388, label: 0.14175977653631286
+Append new sample: [1, 1, 1, 1, 83997, 881, 394, 3079, 1, 1147, 2266], acc: 0.22249052132701402, label: 0.669756221432199
+Updating the model, np.mean(all_acc)=0.4211555150624046
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 118522, 436, 484, 4496, 5, 515, 5300], acc: 0.32884654471544733, label: 0.24987303199593702
+Append new sample: [1, 0, 1, 0, 36044, 893, 769, 5747, 3, 1742, 2380], acc: 0.08852962997310589, label: 0.6845479939055358
+Updating the model, np.mean(all_acc)=0.4123027055741493
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 38086, 289, 558, 3868, 3, 535, 5200], acc: 0.24574221383308606, label: 0.2354304215337735
+Append new sample: [1, 0, 0, 1, 38374, 784, 423, 1676, 8, 1707, 6680], acc: 0.25173118507525966, label: 0.748635093956323
+Updating the model, np.mean(all_acc)=0.4057600653293503
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 111616, 294, 471, 3638, 1, 1874, 5036], acc: 0.21899721059972116, label: 0.2275901472828847
+Append new sample: [1, 1, 1, 0, 65629, 678, 749, 3916, 4, 1922, 7753], acc: 0.1635439530587852, label: 0.5842432706957846
+Updating the model, np.mean(all_acc)=0.39751046981011573
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 32071, 640, 602, 3180, 3, 530, 4631], acc: 0.3757270098322729, label: 0.27440959878110716
+Append new sample: [1, 0, 1, 0, 46041, 343, 387, 3070, 0, 771, 7336], acc: 0.22151315272870029, label: 0.8084687658710005
+Updating the model, np.mean(all_acc)=0.39384786282753687
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 1, 0, 37910, 505, 597, 5012, 8, 711, 4089], acc: 0.2993183879746014, label: 0.2449530218384967
+Append new sample: [1, 1, 0, 1, 31819, 508, 479, 2434, 2, 875, 7658], acc: 0.081297570940095, label: 0.7147981208735399
+Updating the model, np.mean(all_acc)=0.3865785812786015
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 1, 0, 69583, 716, 474, 4714, 0, 1794, 5631], acc: 0.22598692984795943, label: 0.23800152361604876
+Append new sample: [1, 1, 1, 1, 72170, 920, 398, 4785, 7, 1803, 6833], acc: 0.07490810610619858, label: 0.6856589639410868
+Updating the model, np.mean(all_acc)=0.3784361308199284
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 1, 0, 113743, 345, 523, 4691, 2, 1764, 5722], acc: 0.23794178794178808, label: 0.24428643981716608
+Append new sample: [1, 1, 1, 1, 30915, 623, 337, 2499, 8, 1534, 2369], acc: 0.1394898329702252, label: 0.6993397663788725
+Updating the model, np.mean(all_acc)=0.372112120141131
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 49872, 897, 635, 3714, 2, 507, 5600], acc: 0.25117294053464284, label: 0.23273235144743526
+Append new sample: [1, 1, 1, 1, 40278, 360, 513, 5831, 7, 698, 4612], acc: 0.04514501482579711, label: 0.6851193499238192
+Updating the model, np.mean(all_acc)=0.3648878252230371
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 1, 53987, 235, 599, 2726, 4, 495, 4978], acc: 0.41280787156913507, label: 0.30646901980700864
+Append new sample: [1, 1, 0, 0, 88855, 614, 205, 4341, 7, 1154, 5212], acc: 0.1594165180561752, label: 0.5695784662265109
+Updating the model, np.mean(all_acc)=0.36242608677271265
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 40108, 330, 396, 3516, 7, 1073, 4287], acc: 0.28073601201652276, label: 0.25358684611477905
+Append new sample: [0, 0, 1, 0, 56246, 636, 369, 5184, 6, 1451, 5512], acc: 0.02638554216867456, label: 0.23711274758760792
+Updating the model, np.mean(all_acc)=0.35609683496422434
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 1, 0, 111491, 316, 431, 3380, 7, 1761, 5624], acc: 0.31799456393287645, label: 0.268600812595226
+Append new sample: [1, 0, 0, 0, 84833, 544, 569, 2774, 4, 1233, 2293], acc: 0.32413624150466264, label: 0.80332656170645
+Updating the model, np.mean(all_acc)=0.355066498721711
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 110436, 818, 281, 3451, 0, 1696, 5705], acc: 0.22687391129572568, label: 0.2368905535804977
+Append new sample: [1, 1, 0, 1, 109224, 415, 560, 5021, 8, 1589, 2747], acc: 0.11531024918355483, label: 0.7095289487049263
+Updating the model, np.mean(all_acc)=0.3498100867650804
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 1, 0, 50668, 800, 769, 3924, 1, 616, 4353], acc: 0.22775027056277056, label: 0.2346368715083799
+Append new sample: [1, 1, 1, 1, 51762, 395, 504, 3484, 0, 1071, 7317], acc: 0.0072387756024777485, label: 0.7020378364652108
+Updating the model, np.mean(all_acc)=0.34335687666278986
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 118222, 537, 510, 3416, 1, 1731, 4341], acc: 0.2434181722273508, label: 0.240699593702387
+Append new sample: [1, 0, 0, 0, 99650, 435, 508, 5250, 8, 663, 4407], acc: 0.24707883519898016, label: 0.7968194514982224
+Updating the model, np.mean(all_acc)=0.3407052990155027
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 119872, 660, 387, 3996, 1, 1932, 6290], acc: 0.2413816549069918, label: 0.24742889791772474
+Append new sample: [1, 0, 0, 1, 101456, 473, 719, 1680, 7, 1095, 4864], acc: 0.16009700653649184, label: 0.7624111223971559
+Updating the model, np.mean(all_acc)=0.33702198406040373
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 1, 35361, 310, 223, 3487, 1, 672, 4476], acc: 0.3154275967533233, label: 0.26983875063484003
+Append new sample: [1, 0, 0, 0, 109376, 894, 277, 1831, 8, 911, 5889], acc: 0.09731057258477137, label: 0.6824212798374809
+Updating the model, np.mean(all_acc)=0.33367190971703564
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 38175, 384, 707, 4559, 4, 583, 4265], acc: 0.21499347599164934, label: 0.24327069578466226
+Append new sample: [1, 0, 0, 1, 72271, 786, 483, 3563, 2, 744, 4739], acc: 0.21783274401227565, label: 0.9515617064499746
+Updating the model, np.mean(all_acc)=0.3307404397241588
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 0, 0, 105007, 336, 430, 4087, 0, 1312, 7343], acc: 0.20676594069797966, label: 0.24193753174200103
+Append new sample: [1, 0, 0, 1, 112542, 485, 746, 4806, 0, 1235, 3080], acc: 0.2953914846117047, label: 0.9952704418486541
+Updating the model, np.mean(all_acc)=0.32879747077124866
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 1, 0, 52208, 290, 424, 3430, 0, 1843, 8035], acc: 0.2899659983585415, label: 0.27072752666328087
+Append new sample: [1, 0, 0, 0, 57265, 395, 232, 1831, 4, 931, 4995], acc: 0.03618609886502202, label: 0.6768029456576943
+Updating the model, np.mean(all_acc)=0.3248517226245947
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 1, 0, 112315, 511, 518, 3415, 2, 1633, 5811], acc: 0.26646228123114063, label: 0.2629824784154393
+Append new sample: [0, 0, 0, 1, 81518, 860, 498, 4937, 0, 1726, 6365], acc: 0.13320788317701518, label: 0.267362874555612
+Updating the model, np.mean(all_acc)=0.32194435889388506
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 1, 0, 36486, 320, 598, 3637, 6, 735, 4407], acc: 0.22475606469002674, label: 0.23552564753682073
+Append new sample: [1, 1, 1, 1, 76646, 888, 255, 2747, 8, 1293, 5313], acc: 0.02114179070917841, label: 0.7058468765871001
+Updating the model, np.mean(all_acc)=0.31742173545765134
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 1, 1, 1, 38782, 599, 606, 2636, 7, 897, 5015], acc: 0.3687943262411347, label: 0.30434230573895377
+Append new sample: [1, 1, 0, 1, 112263, 884, 543, 4508, 4, 602, 3696], acc: 0.020769933327244323, label: 0.6950863382427628
+Updating the model, np.mean(all_acc)=0.31469641088712996
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 1, 0, 48634, 276, 600, 5654, 6, 566, 4152], acc: 0.16926606700560548, label: 0.24349288979177247
+Append new sample: [1, 0, 0, 1, 45086, 858, 615, 5777, 8, 1159, 4962], acc: 0.0779323308270677, label: 0.7936769933976638
+Updating the model, np.mean(all_acc)=0.31054212367037354
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 0, 0, 47359, 728, 596, 4828, 7, 557, 4127], acc: 0.1825218754081232, label: 0.24304850177755205
+Append new sample: [0, 0, 0, 0, 110057, 804, 716, 5858, 2, 1492, 2971], acc: 0.018815430575399465, label: 0.2443816658202133
+Updating the model, np.mean(all_acc)=0.30607673067721164
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 1, 0, 101414, 332, 227, 3795, 1, 599, 6815], acc: 0.22097656250000028, label: 0.2356526155408837
+Append new sample: [1, 0, 0, 1, 50259, 232, 274, 1854, 8, 830, 5680], acc: 0.06885874349739936, label: 0.7932326053834434
+Updating the model, np.mean(all_acc)=0.3027192498922426
+Generated 30000 neighbors and get their EI values
+Append new sample: [0, 0, 1, 0, 113009, 330, 354, 4475, 0, 1222, 6374], acc: 0.19925050369375408, label: 0.2363191975622143
+Append new sample: [1, 0, 0, 0, 66051, 628, 356, 5191, 4, 1697, 5207], acc: 0.13531745104908702, label: 0.8154202640934485
+Updating the model, np.mean(all_acc)=0.29995526473875644
+Model saved to rf_model.pkl
+config: {'turbo-inlining': True, 'use-osr': True, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 51664, 'max-inlined-bytecode-size': 709, 'invocation-count-for-maglev': 616, 'invocation-count-for-turbofan': 3360, 'min-semi-space-size': 2, 'stack-size': 681, 'baseline-batch-compilation-threshold': 2922}, loss: 0.06038775721228417, true_score: 0.6139537836465211
+config: {'turbo-inlining': False, 'use-osr': False, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 99524, 'max-inlined-bytecode-size': 400, 'invocation-count-for-maglev': 706, 'invocation-count-for-turbofan': 1775, 'min-semi-space-size': 7, 'stack-size': 1284, 'baseline-batch-compilation-threshold': 7755}, loss: 0.08086310432569971, true_score: 0.3118651599796851
+config: {'turbo-inlining': True, 'use-osr': True, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 88323, 'max-inlined-bytecode-size': 482, 'invocation-count-for-maglev': 390, 'invocation-count-for-turbofan': 4054, 'min-semi-space-size': 0, 'stack-size': 1506, 'baseline-batch-compilation-threshold': 6311}, loss: 0.12997285747285747, true_score: 0.5496444895886237
+config: {'turbo-inlining': True, 'use-osr': True, 'compact-on-every-full-gc': False, 'inline-new': True, 'max-optimized-bytecode-size': 50592, 'max-inlined-bytecode-size': 566, 'invocation-count-for-maglev': 722, 'invocation-count-for-turbofan': 5581, 'min-semi-space-size': 1, 'stack-size': 1050, 'baseline-batch-compilation-threshold': 5448}, loss: 0.016564679624290667, true_score: 0.6826434738445911
+config: {'turbo-inlining': False, 'use-osr': True, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 54764, 'max-inlined-bytecode-size': 736, 'invocation-count-for-maglev': 324, 'invocation-count-for-turbofan': 3935, 'min-semi-space-size': 8, 'stack-size': 988, 'baseline-batch-compilation-threshold': 6926}, loss: 0.02056812134113926, true_score: 0.23857287963433216
+config: {'turbo-inlining': False, 'use-osr': True, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 87663, 'max-inlined-bytecode-size': 368, 'invocation-count-for-maglev': 469, 'invocation-count-for-turbofan': 5406, 'min-semi-space-size': 8, 'stack-size': 1475, 'baseline-batch-compilation-threshold': 6268}, loss: 0.006622258107926182, true_score: 0.23587480954799392
+config: {'turbo-inlining': True, 'use-osr': True, 'compact-on-every-full-gc': False, 'inline-new': True, 'max-optimized-bytecode-size': 49703, 'max-inlined-bytecode-size': 621, 'invocation-count-for-maglev': 746, 'invocation-count-for-turbofan': 2493, 'min-semi-space-size': 1, 'stack-size': 726, 'baseline-batch-compilation-threshold': 4400}, loss: 0.013729502703185698, true_score: 0.7104177247333672
+config: {'turbo-inlining': False, 'use-osr': True, 'compact-on-every-full-gc': False, 'inline-new': True, 'max-optimized-bytecode-size': 76797, 'max-inlined-bytecode-size': 716, 'invocation-count-for-maglev': 493, 'invocation-count-for-turbofan': 5024, 'min-semi-space-size': 4, 'stack-size': 1004, 'baseline-batch-compilation-threshold': 7030}, loss: 0.03020153313550951, true_score: 0.25672930421533774
+config: {'turbo-inlining': True, 'use-osr': False, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 43071, 'max-inlined-bytecode-size': 445, 'invocation-count-for-maglev': 328, 'invocation-count-for-turbofan': 5062, 'min-semi-space-size': 7, 'stack-size': 600, 'baseline-batch-compilation-threshold': 5726}, loss: 0.13384512085944494, true_score: 0.7800279329608939
+config: {'turbo-inlining': False, 'use-osr': True, 'compact-on-every-full-gc': False, 'inline-new': True, 'max-optimized-bytecode-size': 91730, 'max-inlined-bytecode-size': 849, 'invocation-count-for-maglev': 598, 'invocation-count-for-turbofan': 5087, 'min-semi-space-size': 2, 'stack-size': 833, 'baseline-batch-compilation-threshold': 4720}, loss: 0.12025684723067544, true_score: 0.2607605383443372
+config: {'turbo-inlining': False, 'use-osr': False, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 113860, 'max-inlined-bytecode-size': 623, 'invocation-count-for-maglev': 687, 'invocation-count-for-turbofan': 5613, 'min-semi-space-size': 4, 'stack-size': 1901, 'baseline-batch-compilation-threshold': 5925}, loss: 0.00616384563303983, true_score: 0.23441467750126968
+config: {'turbo-inlining': False, 'use-osr': False, 'compact-on-every-full-gc': True, 'inline-new': True, 'max-optimized-bytecode-size': 102594, 'max-inlined-bytecode-size': 906, 'invocation-count-for-maglev': 581, 'invocation-count-for-turbofan': 3070, 'min-semi-space-size': 0, 'stack-size': 769, 'baseline-batch-compilation-threshold': 5054}, loss: 0.21467400881057272, true_score: 0.2882173692229558
+config: {'turbo-inlining': False, 'use-osr': True, 'compact-on-every-full-gc': False, 'inline-new': False, 'max-optimized-bytecode-size': 104950, 'max-inlined-bytecode-size': 781, 'invocation-count-for-maglev': 444, 'invocation-count-for-turbofan': 3379, 'min-semi-space-size': 7, 'stack-size': 1151, 'baseline-batch-compilation-threshold': 2551}, loss: 0.04402678027997552, true_score: 0.2607605383443372
+config: {'turbo-inlining': False, 'use-osr': False, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 31240, 'max-inlined-bytecode-size': 494, 'invocation-count-for-maglev': 494, 'invocation-count-for-turbofan': 2461, 'min-semi-space-size': 0, 'stack-size': 717, 'baseline-batch-compilation-threshold': 7541}, loss: 0.11329944349315063, true_score: 0.29659725749111227
+config: {'turbo-inlining': True, 'use-osr': False, 'compact-on-every-full-gc': False, 'inline-new': True, 'max-optimized-bytecode-size': 43083, 'max-inlined-bytecode-size': 340, 'invocation-count-for-maglev': 738, 'invocation-count-for-turbofan': 5051, 'min-semi-space-size': 0, 'stack-size': 1435, 'baseline-batch-compilation-threshold': 7176}, loss: 0.2316376339666783, true_score: 1.0040312341289994
+config: {'turbo-inlining': True, 'use-osr': False, 'compact-on-every-full-gc': False, 'inline-new': False, 'max-optimized-bytecode-size': 57024, 'max-inlined-bytecode-size': 416, 'invocation-count-for-maglev': 442, 'invocation-count-for-turbofan': 5700, 'min-semi-space-size': 4, 'stack-size': 1692, 'baseline-batch-compilation-threshold': 4290}, loss: 0.08905915337592492, true_score: 0.6906107160995429
+config: {'turbo-inlining': True, 'use-osr': True, 'compact-on-every-full-gc': False, 'inline-new': False, 'max-optimized-bytecode-size': 89152, 'max-inlined-bytecode-size': 760, 'invocation-count-for-maglev': 791, 'invocation-count-for-turbofan': 1778, 'min-semi-space-size': 3, 'stack-size': 1633, 'baseline-batch-compilation-threshold': 6894}, loss: 0.03131500943142026, true_score: 0.5889728288471305
+config: {'turbo-inlining': False, 'use-osr': False, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 108090, 'max-inlined-bytecode-size': 919, 'invocation-count-for-maglev': 606, 'invocation-count-for-turbofan': 4209, 'min-semi-space-size': 7, 'stack-size': 1760, 'baseline-batch-compilation-threshold': 6243}, loss: 0.0533547437441455, true_score: 0.23720797359065515
+config: {'turbo-inlining': True, 'use-osr': False, 'compact-on-every-full-gc': False, 'inline-new': True, 'max-optimized-bytecode-size': 73774, 'max-inlined-bytecode-size': 492, 'invocation-count-for-maglev': 488, 'invocation-count-for-turbofan': 5258, 'min-semi-space-size': 1, 'stack-size': 585, 'baseline-batch-compilation-threshold': 4260}, loss: 0.3033857607889901, true_score: 0.9848590655154901
+config: {'turbo-inlining': True, 'use-osr': False, 'compact-on-every-full-gc': False, 'inline-new': True, 'max-optimized-bytecode-size': 97636, 'max-inlined-bytecode-size': 907, 'invocation-count-for-maglev': 776, 'invocation-count-for-turbofan': 2958, 'min-semi-space-size': 1, 'stack-size': 1142, 'baseline-batch-compilation-threshold': 2611}, loss: 0.25680181322513157, true_score: 1.0013331640426613
+config: {'turbo-inlining': False, 'use-osr': False, 'compact-on-every-full-gc': False, 'inline-new': False, 'max-optimized-bytecode-size': 31820, 'max-inlined-bytecode-size': 569, 'invocation-count-for-maglev': 665, 'invocation-count-for-turbofan': 4514, 'min-semi-space-size': 1, 'stack-size': 1922, 'baseline-batch-compilation-threshold': 6762}, loss: 0.02777263714474565, true_score: 0.2401282376841036
+config: {'turbo-inlining': False, 'use-osr': True, 'compact-on-every-full-gc': True, 'inline-new': True, 'max-optimized-bytecode-size': 102733, 'max-inlined-bytecode-size': 381, 'invocation-count-for-maglev': 432, 'invocation-count-for-turbofan': 4889, 'min-semi-space-size': 8, 'stack-size': 946, 'baseline-batch-compilation-threshold': 7461}, loss: 0.03541231865614665, true_score: 0.2494286439817166
+config: {'turbo-inlining': False, 'use-osr': True, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 44657, 'max-inlined-bytecode-size': 544, 'invocation-count-for-maglev': 294, 'invocation-count-for-turbofan': 4273, 'min-semi-space-size': 4, 'stack-size': 795, 'baseline-batch-compilation-threshold': 6557}, loss: 0.01103585657370537, true_score: 0.23901726764855258
+config: {'turbo-inlining': True, 'use-osr': False, 'compact-on-every-full-gc': False, 'inline-new': False, 'max-optimized-bytecode-size': 77123, 'max-inlined-bytecode-size': 688, 'invocation-count-for-maglev': 599, 'invocation-count-for-turbofan': 4277, 'min-semi-space-size': 4, 'stack-size': 554, 'baseline-batch-compilation-threshold': 8136}, loss: 0.17619711614641112, true_score: 0.8012950736414424
+config: {'turbo-inlining': False, 'use-osr': False, 'compact-on-every-full-gc': True, 'inline-new': True, 'max-optimized-bytecode-size': 117734, 'max-inlined-bytecode-size': 584, 'invocation-count-for-maglev': 393, 'invocation-count-for-turbofan': 3525, 'min-semi-space-size': 8, 'stack-size': 1165, 'baseline-batch-compilation-threshold': 6145}, loss: 0.13464915235208275, true_score: 0.2827260030472321
+config: {'turbo-inlining': True, 'use-osr': False, 'compact-on-every-full-gc': False, 'inline-new': False, 'max-optimized-bytecode-size': 100366, 'max-inlined-bytecode-size': 422, 'invocation-count-for-maglev': 747, 'invocation-count-for-turbofan': 1768, 'min-semi-space-size': 6, 'stack-size': 1479, 'baseline-batch-compilation-threshold': 2061}, loss: 0.018207226609236498, true_score: 0.6632491112239716
+config: {'turbo-inlining': False, 'use-osr': True, 'compact-on-every-full-gc': True, 'inline-new': True, 'max-optimized-bytecode-size': 98958, 'max-inlined-bytecode-size': 749, 'invocation-count-for-maglev': 747, 'invocation-count-for-turbofan': 3927, 'min-semi-space-size': 2, 'stack-size': 1587, 'baseline-batch-compilation-threshold': 4151}, loss: 0.10134339435922796, true_score: 0.25660233621127476
+config: {'turbo-inlining': True, 'use-osr': False, 'compact-on-every-full-gc': True, 'inline-new': False, 'max-optimized-bytecode-size': 85534, 'max-inlined-bytecode-size': 437, 'invocation-count-for-maglev': 357, 'invocation-count-for-turbofan': 5254, 'min-semi-space-size': 0, 'stack-size': 900, 'baseline-batch-compilation-threshold': 8012}, loss: 0.02897587511825954, true_score: 0.8052310817673947
+config: {'turbo-inlining': True, 'use-osr': True, 'compact-on-every-full-gc': False, 'inline-new': False, 'max-optimized-bytecode-size': 36241, 'max-inlined-bytecode-size': 799, 'invocation-count-for-maglev': 476, 'invocation-count-for-turbofan': 5658, 'min-semi-space-size': 1, 'stack-size': 1576, 'baseline-batch-compilation-threshold': 6745}, loss: 0.05470689377250006, true_score: 0.5907503809040122
+config: {'turbo-inlining': True, 'use-osr': False, 'compact-on-every-full-gc': True, 'inline-new': True, 'max-optimized-bytecode-size': 119674, 'max-inlined-bytecode-size': 709, 'invocation-count-for-maglev': 736, 'invocation-count-for-turbofan': 2349, 'min-semi-space-size': 6, 'stack-size': 568, 'baseline-batch-compilation-threshold': 5997}, loss: 0.02577148015857409, true_score: 0.8086909598781107
+Average loss: 0.08569339752176439
