@@ -1,0 +1,24 @@
+{
+  "experiment": {
+    "url": "https://www.taobao.com",
+    "param_group": "baseline",
+    "load_time_ms": 30348,
+    "success": true
+  },
+  "script_performance": {
+    "page": "https://www.taobao.com",
+    "param_group": "baseline",
+    "timestamp": 1764330817352,
+    "summary": {
+      "script_duration_ms": 1.3539999999999999,
+      "task_duration_ms": 3.169,
+      "js_heap_used_mb": 80.6736831665039
+    },
+    "scripts": [
+      {
+        "script_url": "https://h5api.m.taobao.com/h5/mtop.taobao.pc.growth.dasai.getselectedtheme/1.0/?jsv=2.7.2&appKey=12574478&t=1764330812646&sign=e1b3cfaa68c148e0c9ddab1c132dee1a&api=mtop.taobao.pc.growth.dasai.getSelectedTheme&v=1.0&type=jsonp&dataType=jsonp&timeout=20000&callback=mtopjsonp18&data=%7B%7D",
+        "execute_time_ms": null
+      }
+    ]
+  }
+}

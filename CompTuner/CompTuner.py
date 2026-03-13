@@ -6,13 +6,13 @@ import numpy as np
 from scipy.stats import norm
 
 
-
+#将指定的字符串 ss 追加写入到指定文件 file 中，用于记录日志信息。
 def write_log(ss, file):
     """ Write to log """
     with open(file, 'a') as log:
         log.write(ss + '\n')
 
-
+#执行给定的终端命令 command，捕获输出并打印。如果命令成功，打印标准输出；否则打印错误输出。用于运行编译、链接和执行程序的命令。
 def execute_terminal_command(command):
     """ Execute command """
     try:
@@ -28,6 +28,7 @@ def execute_terminal_command(command):
     except Exception as e:
         print("执行命令时出现错误：", str(e))
 
+#评估一组编译标志组合的性能加速比。通过编译和运行程序，使用 -O2 加上标志组合测量执行时间，然后用 -O3 测量基准时间，计算加速比（speedup = time_O3 / time_opt），并记录到日志。返回加速比值，作为优化目标。
 def get_objective_score(independent, k_iter, SOURCE_PATH, GCC_PATH, INCLUDE_PATH, EXEC_PARAM, LOG_FILE, all_flags):
     """ Obtain the speedup """
     opt = ''
@@ -67,6 +68,7 @@ def get_objective_score(independent, k_iter, SOURCE_PATH, GCC_PATH, INCLUDE_PATH
 ts_tem = []  # time consumption
     
 class compTuner:
+    #初始化 compTuner 对象，设置粒子群优化（PSO）的参数、随机森林模型相关参数、路径和标志列表。初始化粒子速度、个体最佳位置和全局最佳位置等变量。
     def __init__(self, dim, c1, c2, w, get_objective_score, random, source_path, gcc_path, include_path, exec_param, log_file, flags):
         """
         :param dim: number of compiler flags
@@ -100,6 +102,7 @@ class compTuner:
         self.LOG_FILE = log_file
         self.all_flags = flags
 
+    #将整数 x 转换为二进制字符串，然后转换为长度为 dim 的二进制列表（0 或 1），表示编译标志的启用/禁用状态。用于生成随机配置。
     def generate_random_conf(self, x):
         """
         :param x: random generate number
@@ -115,6 +118,7 @@ class compTuner:
                 conf.append(0)
         return conf
 
+    #计算期望改进（Expected Improvement, EI）值。基于预测值 preds 和当前最佳值 eta，使用正态分布计算 EI，用于贝叶斯优化中的采集函数。
     def get_ei(self, preds, eta):
         """
         :param preds: sequences' speedup for EI
@@ -152,6 +156,7 @@ class compTuner:
         acq_val_incumbent = self.get_ei(preds, now_best)
         return [[i, a] for a, i in zip(acq_val_incumbent, wait_for_train)]
 
+    #使用随机森林模型预测候选配置的运行时间（加速比），返回配置及其预测值的列表。
     def runtime_predict(self, model, wait_for_train):
         """
         :param model: RandomForest Model
@@ -170,6 +175,7 @@ class compTuner:
             a.append(x)
         return a
     
+    #计算模型对给定配置 seq 的预测精度。获取真实加速比和模型预测值，返回相对误差和真实值。
     def getPrecision(self, model, seq):
         """
         :param model: RandomForest Model
@@ -185,6 +191,7 @@ class compTuner:
         acc_predict = np.mean(res)
         return abs(true_running - acc_predict) / true_running, true_running
     
+    #根据 EI 值分布选择下一个配置。计算每个配置与最佳 EI 的差异，基于概率分布随机选择索引。
     def selectByDistribution(self, merged_predicted_objectives):
         """
         :param merged_predicted_objectives: the sequences' EI and the sequences
@@ -197,6 +204,7 @@ class compTuner:
         idx = np.random.choice(index, p=probabilities)
         return idx
     
+    #构建随机森林模型用于编译器调优。初始化训练数据，通过迭代添加高 EI 配置，训练模型，直到满足条件（训练大小或精度阈值）。返回模型、训练配置和性能值。
     def build_RF_by_CompTuner(self):
         """
         :return: model, initial_indep, initial_dep
@@ -262,6 +270,7 @@ class compTuner:
                 break
         return model, inital_indep, initial_dep
     
+    #计算两个配置序列的余弦相似度（cosine similarity），用于评估多样性。
     def getDistance(self, seq1, seq2):
         """
         :param seq1: compared sequence
@@ -275,6 +284,7 @@ class compTuner:
         cos = np.dot(t1, t2) / (s1_norm * s2_norm)
         return cos
     
+    #初始化粒子群中 n 个粒子的速度向量，每个向量长度为 d，值在 [V_min, V_max] 范围内。
     def init_v(self, n, d, V_max, V_min):
         """
         :param n: number of particles
@@ -290,6 +300,7 @@ class compTuner:
             v.append(vi)
         return v
     
+    #更新粒子群中粒子的速度向量。根据 PSO 公式，结合惯性权重、个体最佳和全局最佳，限制速度在 [vmin, vmax] 内。
     def update_v(self, v, x, m, n, pbest, g, w, c1, c2, vmax, vmin):
         """
         :param v: particle's velocity vector
@@ -316,6 +327,7 @@ class compTuner:
                     v[i][j] = vmax
         return v
     
+    #执行主要的调优过程。结合随机森林和 PSO：先构建模型，然后迭代更新粒子位置，评估性能，记录最佳配置，直到时间限制或收敛。输出调优结果到日志。
     def run(self):
         ts = []
         model, inital_indep, inital_dep = self.build_RF_by_CompTuner()
@@ -434,7 +446,7 @@ class compTuner:
             if (time.time() + ts_tem[-1] - begin) > 6000:
                 break
 
-
+#从指定文件读取编译标志列表，文件内容以逗号分隔，返回标志列表。
 def read_flags_from_file(file_path):
     with open(file_path, 'r') as file:
         flags = file.read().strip()

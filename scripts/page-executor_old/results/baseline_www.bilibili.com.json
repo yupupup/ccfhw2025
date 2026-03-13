@@ -1,0 +1,8 @@
+{
+  "experiment": {
+    "url": "https://www.bilibili.com",
+    "param_group": "baseline",
+    "load_time_ms": 14149,
+    "success": true
+  }
+}

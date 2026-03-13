@@ -10,3 +10,13 @@ scripts/page-executor/trace.json
 scripts/page-executor/node_modules/
 CompTuner/.venv/
 __pycache__
+
+# IDE configuration
+.vscode/
+
+# Log files
+*.log
+*.txt
+
+# Model files
+*.pkl
